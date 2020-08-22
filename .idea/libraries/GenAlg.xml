@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="GenAlg">
+    <CLASSES>
+      <root url="file://$USER_HOME$/Devtools/GenAlg" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$USER_HOME$/Devtools/GenAlg" recursive="false" />
+  </library>
+</component>

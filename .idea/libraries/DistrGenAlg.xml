@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="DistrGenAlg">
+    <CLASSES>
+      <root url="file://$USER_HOME$/Devtools/DistrGenAlg" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+    <jarDirectory url="file://$USER_HOME$/Devtools/DistrGenAlg" recursive="false" />
+  </library>
+</component>
