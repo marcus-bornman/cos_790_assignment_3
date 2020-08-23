@@ -1,4 +1,4 @@
-package za.ac.up.heuristic_exam_timetable;
+package timetabling;
 
 import initialsoln.InitialSoln;
 
