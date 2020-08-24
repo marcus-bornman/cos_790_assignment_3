@@ -4,8 +4,8 @@ package timetabling.domain;
  * Models a hard constraint associated with a room.
  */
 public class RoomHardConstraint {
-	final int examNum;
-	final String constraintType;
+	public final int examNum;
+	public final String constraintType;
 
 	/**
 	 * @param examNum        - the exam number of the exam to which the constraint applies.
