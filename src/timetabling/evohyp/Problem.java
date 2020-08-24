@@ -1,23 +1,19 @@
-package timetabling;
+package timetabling.evohyp;
 
 import problemdomain.ProblemDomain;
 import timetabling.domain.*;
-import timetabling.heuristics.LowLevelHeuristic;
 
 import java.util.List;
 
 public class Problem extends ProblemDomain {
-	final List<Exam> exams;
-
-	final List<Period> periods;
-
-	final List<Room> rooms;
-
-	final List<PeriodHardConstraint> periodHardConstraints;
-
-	final List<RoomHardConstraint> roomHardConstraints;
-
-	final List<InstitutionalWeighting> institutionalWeightings;
+	public final String name;
+	public final List<Exam> exams;
+	public final List<Period> periods;
+	public final List<Room> rooms;
+	public final List<PeriodHardConstraint> periodHardConstraints;
+	public final List<RoomHardConstraint> roomHardConstraints;
+	public final List<InstitutionalWeighting> institutionalWeightings;
+	public final int[][] clashMatrix;
 
 	/**
 	 * The constructor for the Problem class.
@@ -29,13 +25,23 @@ public class Problem extends ProblemDomain {
 	 * @param roomHardConstraints     - The set of hard constraints for rooms.
 	 * @param institutionalWeightings - The set of institutional weightings which serve as soft constraints.
 	 */
-	public Problem(List<Exam> exams, List<Period> periods, List<Room> rooms, List<PeriodHardConstraint> periodHardConstraints, List<RoomHardConstraint> roomHardConstraints, List<InstitutionalWeighting> institutionalWeightings) {
+	public Problem(String name, List<Exam> exams, List<Period> periods, List<Room> rooms, List<PeriodHardConstraint> periodHardConstraints, List<RoomHardConstraint> roomHardConstraints, List<InstitutionalWeighting> institutionalWeightings) {
+		this.name = name;
 		this.exams = exams;
 		this.periods = periods;
 		this.rooms = rooms;
 		this.periodHardConstraints = periodHardConstraints;
 		this.roomHardConstraints = roomHardConstraints;
 		this.institutionalWeightings = institutionalWeightings;
+		this.clashMatrix = new int[exams.size()][exams.size()];
+		for (int i = 0; i < exams.size(); i++) {
+			for (int j = 0; j < exams.size(); j++) {
+				Exam examOne = exams.get(i);
+				Exam examTwo = exams.get(j);
+				int numClashes = (int) examOne.students.stream().filter(s1 -> examTwo.students.stream().anyMatch(s1::equals)).count();
+				this.clashMatrix[i][j] = numClashes;
+			}
+		}
 	}
 
 	/**
@@ -53,11 +59,15 @@ public class Problem extends ProblemDomain {
 	 */
 	@Override
 	public Solution evaluate(String heuristicComb) {
-		Solution solution = new Solution();
+		Solution solution = new Solution(this, List.of());
 
 		for (char character : heuristicComb.toCharArray()) {
-			LowLevelHeuristic lowLevelHeuristic = LowLevelHeuristic.fromChar(character);
-			solution = lowLevelHeuristic.applyToSolution(solution);
+			HeuristicApplier lowLevelHeuristicApplier = new HeuristicApplier(this, character);
+			Solution newSolution = lowLevelHeuristicApplier.applyToSolution(solution);
+			while (newSolution.getFitness() < solution.getFitness()) {
+				solution = newSolution;
+				newSolution = lowLevelHeuristicApplier.applyToSolution(solution);
+			}
 		}
 
 		return solution;
