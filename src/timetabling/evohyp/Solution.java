@@ -28,7 +28,7 @@ public class Solution extends InitialSoln {
 
 	@Override
 	public int fitter(InitialSoln other) {
-		return Double.compare(getFitness(), other.getFitness());
+		return Double.compare(other.getFitness(), getFitness());
 	}
 
 	@Override
@@ -43,11 +43,10 @@ public class Solution extends InitialSoln {
 
 	@Override
 	public String solnToString() {
-		StringBuilder solnString = new StringBuilder("START========== Solution to " + problem.name + " =========START");
+		StringBuilder solnString = new StringBuilder();
 		for (Booking booking : bookings) {
 			solnString.append("\n").append(booking);
 		}
-		solnString.append("END============ Solution to ").append(problem.name).append(" ============END");
 
 		return solnString.toString();
 	}
@@ -112,6 +111,7 @@ public class Solution extends InitialSoln {
 
 		for (Booking bookingA : bookings) {
 			for (Booking bookingB : bookings) {
+				if (bookingA.equals(bookingB)) continue;
 				boolean doClash = bookingA.period.number == bookingB.period.number;
 				boolean doShareStudents = problem.clashMatrix[bookingA.exam.number][bookingB.exam.number] > 0;
 				if (doClash && doShareStudents) conflictingExams++;
@@ -206,6 +206,7 @@ public class Solution extends InitialSoln {
 
 		for (Booking bookingA : bookings) {
 			for (Booking bookingB : bookings) {
+				if (bookingA.equals(bookingB)) continue;
 				boolean areNotAdjacent = Math.abs(bookingA.period.number - bookingB.period.number) != 1;
 				boolean areOnSameDay = bookingA.period.date.isEqual(bookingB.period.date);
 				if (areNotAdjacent && areOnSameDay)
@@ -221,7 +222,9 @@ public class Solution extends InitialSoln {
 
 		for (Booking bookingA : bookings) {
 			for (Booking bookingB : bookings) {
-				boolean areWithinSpread = Math.abs(bookingA.period.number - bookingB.period.number) <= weighting.paramOne;
+				int spread = bookingB.period.number - bookingA.period.number;
+				if (spread <= 0) continue;
+				boolean areWithinSpread = spread <= weighting.paramOne;
 				if (areWithinSpread)
 					penalty += problem.clashMatrix[bookingA.exam.number][bookingB.exam.number];
 			}
@@ -236,6 +239,7 @@ public class Solution extends InitialSoln {
 		for (Period period : problem.periods) {
 			for (Room room : problem.rooms) {
 				List<Booking> myBookings = bookings.stream().filter(b -> b.period.number == period.number && b.room.number == room.number).collect(Collectors.toList());
+				if (myBookings.isEmpty()) continue;
 				HashSet<Object> seen = new HashSet<>();
 				myBookings.removeIf(b -> !seen.add(b.exam.duration));
 				int numDifferentDurations = myBookings.size();
