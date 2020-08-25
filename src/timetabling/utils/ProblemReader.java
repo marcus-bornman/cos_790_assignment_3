@@ -26,7 +26,6 @@ public class ProblemReader {
 		String content = Files.readString(Path.of(filePath), StandardCharsets.US_ASCII);
 		List<String> sections = Arrays.asList(content.split("\\[.*]\r\n"));
 
-		String name = filePath.substring(filePath.lastIndexOf("/") + 1);
 		List<Exam> exams = readExams(sections.get(1));
 		List<Period> periods = readPeriods(sections.get(2));
 		List<Room> rooms = readRooms(sections.get(3));
@@ -34,7 +33,7 @@ public class ProblemReader {
 		List<RoomHardConstraint> roomHardConstraints = readRoomHardConstraints(sections.get(5));
 		List<InstitutionalWeighting> institutionalWeightings = readInstitutionalWeightings(sections.get(6));
 
-		return new Problem(name, exams, periods, rooms, periodHardConstraints, roomHardConstraints, institutionalWeightings);
+		return new Problem(exams, periods, rooms, periodHardConstraints, roomHardConstraints, institutionalWeightings);
 	}
 
 	private static List<Exam> readExams(String examSection) {
