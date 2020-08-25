@@ -19,7 +19,7 @@ public class Main {
 			GenAlg genAlg = new GenAlg(seed, heuristics);
 			genAlg.setPopulationSize(50);
 			genAlg.setTournamentSize(10);
-			genAlg.setNoOfGenerations(10);
+			genAlg.setNoOfGenerations(100);
 			genAlg.setMutationRate(0.05);
 			genAlg.setCrossoverRate(0.75);
 			genAlg.setInitialMaxLength(10);
