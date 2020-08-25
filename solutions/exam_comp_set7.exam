@@ -1,0 +1,347 @@
+BEST SOLUTION FOR TEST RUN 0
+========================================
+Fitness: 108400.0
+Heuristic combination: BBBBBBB
+Solution: 
+[[ Exam{number=1059, duration=120, #students=431} | Period{number=0, date=2005-04-11, time=09:30, duration=180, penalty=0} | Room{number=0, capacity=240, penalty=0} ]]
+[[ Exam{number=141, duration=120, #students=296} | Period{number=2, date=2005-04-12, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=969, duration=180, #students=174} | Period{number=4, date=2005-04-13, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=370, duration=120, #students=219} | Period{number=6, date=2005-04-14, time=09:30, duration=180, penalty=0} | Room{number=0, capacity=240, penalty=0} ]]
+[[ Exam{number=406, duration=120, #students=301} | Period{number=8, date=2005-04-15, time=09:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=382, duration=180, #students=366} | Period{number=10, date=2005-04-18, time=09:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=628, duration=120, #students=155} | Period{number=12, date=2005-04-19, time=09:30, duration=180, penalty=0} | Room{number=10, capacity=110, penalty=0} ]]
+[[ Exam{number=408, duration=120, #students=194} | Period{number=14, date=2005-04-20, time=09:30, duration=180, penalty=0} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=120, duration=150, #students=281} | Period{number=16, date=2005-04-21, time=09:30, duration=180, penalty=0} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=264, duration=90, #students=349} | Period{number=18, date=2005-04-22, time=09:30, duration=180, penalty=0} | Room{number=10, capacity=110, penalty=0} ]]
+[[ Exam{number=403, duration=180, #students=177} | Period{number=20, date=2005-04-25, time=09:30, duration=180, penalty=0} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=973, duration=180, #students=126} | Period{number=22, date=2005-04-26, time=09:30, duration=180, penalty=50} | Room{number=11, capacity=35, penalty=70} ]]
+[[ Exam{number=1048, duration=180, #students=204} | Period{number=24, date=2005-04-27, time=09:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=242, duration=120, #students=523} | Period{number=26, date=2005-04-28, time=09:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=631, duration=120, #students=115} | Period{number=28, date=2005-04-29, time=09:30, duration=180, penalty=0} | Room{number=0, capacity=240, penalty=0} ]]
+[[ Exam{number=407, duration=120, #students=190} | Period{number=30, date=2005-05-02, time=09:30, duration=180, penalty=0} | Room{number=5, capacity=110, penalty=0} ]]
+[[ Exam{number=432, duration=120, #students=162} | Period{number=32, date=2005-05-03, time=09:30, duration=180, penalty=0} | Room{number=0, capacity=240, penalty=0} ]]
+[[ Exam{number=205, duration=120, #students=84} | Period{number=34, date=2005-05-04, time=09:30, duration=180, penalty=0} | Room{number=8, capacity=70, penalty=0} ]]
+[[ Exam{number=610, duration=120, #students=199} | Period{number=36, date=2005-05-05, time=09:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=897, duration=120, #students=46} | Period{number=38, date=2005-05-06, time=09:30, duration=180, penalty=0} | Room{number=5, capacity=110, penalty=0} ]]
+[[ Exam{number=129, duration=90, #students=122} | Period{number=40, date=2005-05-09, time=09:30, duration=180, penalty=0} | Room{number=8, capacity=70, penalty=0} ]]
+[[ Exam{number=684, duration=180, #students=62} | Period{number=42, date=2005-05-10, time=09:30, duration=180, penalty=0} | Room{number=1, capacity=90, penalty=0} ]]
+[[ Exam{number=230, duration=90, #students=247} | Period{number=44, date=2005-05-11, time=09:30, duration=180, penalty=0} | Room{number=1, capacity=90, penalty=0} ]]
+[[ Exam{number=644, duration=180, #students=280} | Period{number=46, date=2005-05-12, time=09:30, duration=180, penalty=0} | Room{number=4, capacity=110, penalty=0} ]]
+[[ Exam{number=128, duration=120, #students=166} | Period{number=48, date=2005-05-13, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=138, duration=120, #students=285} | Period{number=50, date=2005-05-16, time=09:30, duration=180, penalty=0} | Room{number=3, capacity=210, penalty=50} ]]
+[[ Exam{number=994, duration=180, #students=80} | Period{number=52, date=2005-05-17, time=09:30, duration=180, penalty=0} | Room{number=1, capacity=90, penalty=0} ]]
+[[ Exam{number=106, duration=180, #students=315} | Period{number=54, date=2005-05-18, time=09:30, duration=180, penalty=0} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=220, duration=120, #students=213} | Period{number=56, date=2005-05-19, time=09:30, duration=180, penalty=0} | Room{number=13, capacity=45, penalty=0} ]]
+[[ Exam{number=1045, duration=120, #students=195} | Period{number=58, date=2005-05-20, time=09:30, duration=180, penalty=0} | Room{number=12, capacity=45, penalty=30} ]]
+[[ Exam{number=107, duration=120, #students=299} | Period{number=60, date=2005-05-23, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=146, duration=120, #students=96} | Period{number=62, date=2005-05-24, time=09:30, duration=180, penalty=0} | Room{number=4, capacity=110, penalty=0} ]]
+[[ Exam{number=1025, duration=180, #students=153} | Period{number=64, date=2005-05-25, time=09:30, duration=180, penalty=0} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=429, duration=120, #students=104} | Period{number=66, date=2005-05-26, time=09:30, duration=180, penalty=0} | Room{number=4, capacity=110, penalty=0} ]]
+[[ Exam{number=643, duration=120, #students=455} | Period{number=68, date=2005-05-27, time=09:30, duration=180, penalty=0} | Room{number=4, capacity=110, penalty=0} ]]
+
+
+BEST SOLUTION FOR TEST RUN 1
+========================================
+Fitness: 109200.0
+Heuristic combination: B
+Solution: 
+[[ Exam{number=1059, duration=120, #students=431} | Period{number=0, date=2005-04-11, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=141, duration=120, #students=296} | Period{number=2, date=2005-04-12, time=09:30, duration=180, penalty=0} | Room{number=0, capacity=240, penalty=0} ]]
+[[ Exam{number=969, duration=180, #students=174} | Period{number=4, date=2005-04-13, time=09:30, duration=180, penalty=0} | Room{number=0, capacity=240, penalty=0} ]]
+[[ Exam{number=370, duration=120, #students=219} | Period{number=6, date=2005-04-14, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=406, duration=120, #students=301} | Period{number=8, date=2005-04-15, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+
+
+BEST SOLUTION FOR TEST RUN 2
+========================================
+Fitness: 108590.0
+Heuristic combination: BEBBEBB
+Solution: 
+[[ Exam{number=1059, duration=120, #students=431} | Period{number=0, date=2005-04-11, time=09:30, duration=180, penalty=0} | Room{number=10, capacity=110, penalty=0} ]]
+[[ Exam{number=141, duration=120, #students=296} | Period{number=2, date=2005-04-12, time=09:30, duration=180, penalty=0} | Room{number=5, capacity=110, penalty=0} ]]
+[[ Exam{number=969, duration=180, #students=174} | Period{number=4, date=2005-04-13, time=09:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=370, duration=120, #students=219} | Period{number=6, date=2005-04-14, time=09:30, duration=180, penalty=0} | Room{number=9, capacity=110, penalty=0} ]]
+[[ Exam{number=406, duration=120, #students=301} | Period{number=8, date=2005-04-15, time=09:30, duration=180, penalty=0} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=358, duration=120, #students=610} | Period{number=10, date=2005-04-18, time=09:30, duration=180, penalty=0} | Room{number=5, capacity=110, penalty=0} ]]
+[[ Exam{number=242, duration=120, #students=523} | Period{number=12, date=2005-04-19, time=09:30, duration=180, penalty=0} | Room{number=8, capacity=70, penalty=0} ]]
+[[ Exam{number=643, duration=120, #students=455} | Period{number=14, date=2005-04-20, time=09:30, duration=180, penalty=0} | Room{number=8, capacity=70, penalty=0} ]]
+[[ Exam{number=209, duration=180, #students=416} | Period{number=16, date=2005-04-21, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=91, duration=60, #students=394} | Period{number=18, date=2005-04-22, time=09:30, duration=180, penalty=0} | Room{number=1, capacity=90, penalty=0} ]]
+[[ Exam{number=382, duration=180, #students=366} | Period{number=20, date=2005-04-25, time=09:30, duration=180, penalty=0} | Room{number=5, capacity=110, penalty=0} ]]
+[[ Exam{number=628, duration=120, #students=155} | Period{number=22, date=2005-04-26, time=09:30, duration=180, penalty=50} | Room{number=1, capacity=90, penalty=0} ]]
+[[ Exam{number=408, duration=120, #students=194} | Period{number=24, date=2005-04-27, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=120, duration=150, #students=281} | Period{number=26, date=2005-04-28, time=09:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=264, duration=90, #students=349} | Period{number=28, date=2005-04-29, time=09:30, duration=180, penalty=0} | Room{number=6, capacity=70, penalty=0} ]]
+[[ Exam{number=403, duration=180, #students=177} | Period{number=30, date=2005-05-02, time=09:30, duration=180, penalty=0} | Room{number=0, capacity=240, penalty=0} ]]
+[[ Exam{number=973, duration=180, #students=126} | Period{number=32, date=2005-05-03, time=09:30, duration=180, penalty=0} | Room{number=0, capacity=240, penalty=0} ]]
+[[ Exam{number=1048, duration=180, #students=204} | Period{number=34, date=2005-05-04, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=631, duration=120, #students=115} | Period{number=36, date=2005-05-05, time=09:30, duration=180, penalty=0} | Room{number=3, capacity=210, penalty=50} ]]
+[[ Exam{number=407, duration=120, #students=190} | Period{number=38, date=2005-05-06, time=09:30, duration=180, penalty=0} | Room{number=1, capacity=90, penalty=0} ]]
+[[ Exam{number=326, duration=120, #students=360} | Period{number=40, date=2005-05-09, time=09:30, duration=180, penalty=0} | Room{number=10, capacity=110, penalty=0} ]]
+[[ Exam{number=88, duration=60, #students=333} | Period{number=42, date=2005-05-10, time=09:30, duration=180, penalty=0} | Room{number=4, capacity=110, penalty=0} ]]
+[[ Exam{number=106, duration=180, #students=315} | Period{number=44, date=2005-05-11, time=09:30, duration=180, penalty=0} | Room{number=1, capacity=90, penalty=0} ]]
+[[ Exam{number=107, duration=120, #students=299} | Period{number=46, date=2005-05-12, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=92, duration=60, #students=295} | Period{number=48, date=2005-05-13, time=09:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=432, duration=120, #students=162} | Period{number=50, date=2005-05-16, time=09:30, duration=180, penalty=0} | Room{number=8, capacity=70, penalty=0} ]]
+[[ Exam{number=205, duration=120, #students=84} | Period{number=52, date=2005-05-17, time=09:30, duration=180, penalty=0} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=610, duration=120, #students=199} | Period{number=54, date=2005-05-18, time=09:30, duration=180, penalty=0} | Room{number=6, capacity=70, penalty=0} ]]
+[[ Exam{number=897, duration=120, #students=46} | Period{number=56, date=2005-05-19, time=09:30, duration=180, penalty=0} | Room{number=4, capacity=110, penalty=0} ]]
+[[ Exam{number=129, duration=90, #students=122} | Period{number=58, date=2005-05-20, time=09:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=684, duration=180, #students=62} | Period{number=60, date=2005-05-23, time=09:30, duration=180, penalty=0} | Room{number=1, capacity=90, penalty=0} ]]
+[[ Exam{number=230, duration=90, #students=247} | Period{number=62, date=2005-05-24, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=644, duration=180, #students=280} | Period{number=64, date=2005-05-25, time=09:30, duration=180, penalty=0} | Room{number=1, capacity=90, penalty=0} ]]
+[[ Exam{number=128, duration=120, #students=166} | Period{number=66, date=2005-05-26, time=09:30, duration=180, penalty=0} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=138, duration=120, #students=285} | Period{number=68, date=2005-05-27, time=09:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+
+
+BEST SOLUTION FOR TEST RUN 3
+========================================
+Fitness: 109050.0
+Heuristic combination: HHB
+Solution: 
+[[ Exam{number=91, duration=60, #students=394} | Period{number=0, date=2005-04-11, time=09:30, duration=180, penalty=0} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=88, duration=60, #students=333} | Period{number=2, date=2005-04-12, time=09:30, duration=180, penalty=0} | Room{number=4, capacity=110, penalty=0} ]]
+[[ Exam{number=358, duration=120, #students=610} | Period{number=4, date=2005-04-13, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=92, duration=60, #students=295} | Period{number=6, date=2005-04-14, time=09:30, duration=180, penalty=0} | Room{number=9, capacity=110, penalty=0} ]]
+[[ Exam{number=242, duration=120, #students=523} | Period{number=8, date=2005-04-15, time=09:30, duration=180, penalty=0} | Room{number=13, capacity=45, penalty=0} ]]
+[[ Exam{number=90, duration=60, #students=248} | Period{number=10, date=2005-04-18, time=09:30, duration=180, penalty=0} | Room{number=13, capacity=45, penalty=0} ]]
+[[ Exam{number=643, duration=120, #students=455} | Period{number=12, date=2005-04-19, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=89, duration=60, #students=239} | Period{number=14, date=2005-04-20, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=1059, duration=120, #students=431} | Period{number=16, date=2005-04-21, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=209, duration=180, #students=416} | Period{number=18, date=2005-04-22, time=09:30, duration=180, penalty=0} | Room{number=9, capacity=110, penalty=0} ]]
+[[ Exam{number=141, duration=120, #students=296} | Period{number=20, date=2005-04-25, time=09:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=969, duration=180, #students=174} | Period{number=22, date=2005-04-26, time=09:30, duration=180, penalty=50} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=370, duration=120, #students=219} | Period{number=24, date=2005-04-27, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=406, duration=120, #students=301} | Period{number=26, date=2005-04-28, time=09:30, duration=180, penalty=0} | Room{number=8, capacity=70, penalty=0} ]]
+[[ Exam{number=382, duration=180, #students=366} | Period{number=28, date=2005-04-29, time=09:30, duration=180, penalty=0} | Room{number=13, capacity=45, penalty=0} ]]
+
+
+BEST SOLUTION FOR TEST RUN 4
+========================================
+Fitness: 108610.0
+Heuristic combination: HHHHHHB
+Solution: 
+[[ Exam{number=91, duration=60, #students=394} | Period{number=0, date=2005-04-11, time=09:30, duration=180, penalty=0} | Room{number=3, capacity=210, penalty=50} ]]
+[[ Exam{number=88, duration=60, #students=333} | Period{number=2, date=2005-04-12, time=09:30, duration=180, penalty=0} | Room{number=9, capacity=110, penalty=0} ]]
+[[ Exam{number=358, duration=120, #students=610} | Period{number=4, date=2005-04-13, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=92, duration=60, #students=295} | Period{number=6, date=2005-04-14, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=242, duration=120, #students=523} | Period{number=8, date=2005-04-15, time=09:30, duration=180, penalty=0} | Room{number=4, capacity=110, penalty=0} ]]
+[[ Exam{number=90, duration=60, #students=248} | Period{number=10, date=2005-04-18, time=09:30, duration=180, penalty=0} | Room{number=6, capacity=70, penalty=0} ]]
+[[ Exam{number=643, duration=120, #students=455} | Period{number=12, date=2005-04-19, time=09:30, duration=180, penalty=0} | Room{number=6, capacity=70, penalty=0} ]]
+[[ Exam{number=89, duration=60, #students=239} | Period{number=14, date=2005-04-20, time=09:30, duration=180, penalty=0} | Room{number=6, capacity=70, penalty=0} ]]
+[[ Exam{number=1059, duration=120, #students=431} | Period{number=16, date=2005-04-21, time=09:30, duration=180, penalty=0} | Room{number=4, capacity=110, penalty=0} ]]
+[[ Exam{number=209, duration=180, #students=416} | Period{number=18, date=2005-04-22, time=09:30, duration=180, penalty=0} | Room{number=1, capacity=90, penalty=0} ]]
+[[ Exam{number=230, duration=90, #students=247} | Period{number=20, date=2005-04-25, time=09:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=138, duration=120, #students=285} | Period{number=22, date=2005-04-26, time=09:30, duration=180, penalty=50} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=87, duration=60, #students=195} | Period{number=24, date=2005-04-27, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=382, duration=180, #students=366} | Period{number=26, date=2005-04-28, time=09:30, duration=180, penalty=0} | Room{number=6, capacity=70, penalty=0} ]]
+[[ Exam{number=326, duration=120, #students=360} | Period{number=28, date=2005-04-29, time=09:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=264, duration=90, #students=349} | Period{number=30, date=2005-05-02, time=09:30, duration=180, penalty=0} | Room{number=6, capacity=70, penalty=0} ]]
+[[ Exam{number=969, duration=180, #students=174} | Period{number=32, date=2005-05-03, time=09:30, duration=180, penalty=0} | Room{number=1, capacity=90, penalty=0} ]]
+[[ Exam{number=86, duration=60, #students=173} | Period{number=34, date=2005-05-04, time=09:30, duration=180, penalty=0} | Room{number=4, capacity=110, penalty=0} ]]
+[[ Exam{number=141, duration=120, #students=296} | Period{number=36, date=2005-05-05, time=09:30, duration=180, penalty=0} | Room{number=12, capacity=45, penalty=30} ]]
+[[ Exam{number=106, duration=180, #students=315} | Period{number=38, date=2005-05-06, time=09:30, duration=180, penalty=0} | Room{number=6, capacity=70, penalty=0} ]]
+[[ Exam{number=644, duration=180, #students=280} | Period{number=40, date=2005-05-09, time=09:30, duration=180, penalty=0} | Room{number=13, capacity=45, penalty=0} ]]
+[[ Exam{number=406, duration=120, #students=301} | Period{number=42, date=2005-05-10, time=09:30, duration=180, penalty=0} | Room{number=12, capacity=45, penalty=30} ]]
+[[ Exam{number=663, duration=120, #students=121} | Period{number=44, date=2005-05-11, time=09:30, duration=180, penalty=0} | Room{number=0, capacity=240, penalty=0} ]]
+[[ Exam{number=952, duration=180, #students=120} | Period{number=46, date=2005-05-12, time=09:30, duration=180, penalty=0} | Room{number=1, capacity=90, penalty=0} ]]
+[[ Exam{number=120, duration=150, #students=281} | Period{number=48, date=2005-05-13, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=846, duration=120, #students=115} | Period{number=50, date=2005-05-16, time=09:30, duration=180, penalty=0} | Room{number=13, capacity=45, penalty=0} ]]
+[[ Exam{number=953, duration=180, #students=116} | Period{number=52, date=2005-05-17, time=09:30, duration=180, penalty=0} | Room{number=0, capacity=240, penalty=0} ]]
+[[ Exam{number=954, duration=180, #students=114} | Period{number=54, date=2005-05-18, time=09:30, duration=180, penalty=0} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=959, duration=120, #students=114} | Period{number=56, date=2005-05-19, time=09:30, duration=180, penalty=0} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=103, duration=180, #students=293} | Period{number=58, date=2005-05-20, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=370, duration=120, #students=219} | Period{number=60, date=2005-05-23, time=09:30, duration=180, penalty=0} | Room{number=0, capacity=240, penalty=0} ]]
+[[ Exam{number=628, duration=120, #students=155} | Period{number=62, date=2005-05-24, time=09:30, duration=180, penalty=0} | Room{number=8, capacity=70, penalty=0} ]]
+[[ Exam{number=408, duration=120, #students=194} | Period{number=64, date=2005-05-25, time=09:30, duration=180, penalty=0} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=403, duration=180, #students=177} | Period{number=66, date=2005-05-26, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=973, duration=180, #students=126} | Period{number=68, date=2005-05-27, time=09:30, duration=180, penalty=0} | Room{number=3, capacity=210, penalty=50} ]]
+
+
+BEST SOLUTION FOR TEST RUN 5
+========================================
+Fitness: 107110.0
+Heuristic combination: CGECBCBBCCBCCB
+Solution: 
+[[ Exam{number=1059, duration=120, #students=431} | Period{number=0, date=2005-04-11, time=09:30, duration=180, penalty=0} | Room{number=8, capacity=70, penalty=0} ]]
+[[ Exam{number=141, duration=120, #students=296} | Period{number=1, date=2005-04-11, time=14:30, duration=180, penalty=0} | Room{number=9, capacity=110, penalty=0} ]]
+[[ Exam{number=969, duration=180, #students=174} | Period{number=2, date=2005-04-12, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=370, duration=120, #students=219} | Period{number=3, date=2005-04-12, time=14:30, duration=180, penalty=0} | Room{number=4, capacity=110, penalty=0} ]]
+[[ Exam{number=406, duration=120, #students=301} | Period{number=4, date=2005-04-13, time=09:30, duration=180, penalty=0} | Room{number=6, capacity=70, penalty=0} ]]
+[[ Exam{number=91, duration=60, #students=394} | Period{number=5, date=2005-04-13, time=14:30, duration=180, penalty=0} | Room{number=3, capacity=210, penalty=50} ]]
+[[ Exam{number=88, duration=60, #students=333} | Period{number=6, date=2005-04-14, time=09:30, duration=180, penalty=0} | Room{number=0, capacity=240, penalty=0} ]]
+[[ Exam{number=358, duration=120, #students=610} | Period{number=7, date=2005-04-14, time=14:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=92, duration=60, #students=295} | Period{number=8, date=2005-04-15, time=09:30, duration=180, penalty=0} | Room{number=9, capacity=110, penalty=0} ]]
+[[ Exam{number=242, duration=120, #students=523} | Period{number=9, date=2005-04-15, time=14:30, duration=180, penalty=0} | Room{number=1, capacity=90, penalty=0} ]]
+[[ Exam{number=643, duration=120, #students=455} | Period{number=10, date=2005-04-18, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=209, duration=180, #students=416} | Period{number=12, date=2005-04-19, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=382, duration=180, #students=366} | Period{number=14, date=2005-04-20, time=09:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=326, duration=120, #students=360} | Period{number=16, date=2005-04-21, time=09:30, duration=180, penalty=0} | Room{number=9, capacity=110, penalty=0} ]]
+[[ Exam{number=264, duration=90, #students=349} | Period{number=18, date=2005-04-22, time=09:30, duration=180, penalty=0} | Room{number=0, capacity=240, penalty=0} ]]
+[[ Exam{number=628, duration=120, #students=155} | Period{number=11, date=2005-04-18, time=14:30, duration=180, penalty=0} | Room{number=8, capacity=70, penalty=0} ]]
+[[ Exam{number=408, duration=120, #students=194} | Period{number=13, date=2005-04-19, time=14:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=120, duration=150, #students=281} | Period{number=15, date=2005-04-20, time=14:30, duration=180, penalty=0} | Room{number=1, capacity=90, penalty=0} ]]
+[[ Exam{number=403, duration=180, #students=177} | Period{number=17, date=2005-04-21, time=14:30, duration=180, penalty=0} | Room{number=0, capacity=240, penalty=0} ]]
+[[ Exam{number=973, duration=180, #students=126} | Period{number=19, date=2005-04-22, time=14:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=1048, duration=180, #students=204} | Period{number=20, date=2005-04-25, time=09:30, duration=180, penalty=0} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=631, duration=120, #students=115} | Period{number=22, date=2005-04-26, time=09:30, duration=180, penalty=50} | Room{number=6, capacity=70, penalty=0} ]]
+[[ Exam{number=407, duration=120, #students=190} | Period{number=24, date=2005-04-27, time=09:30, duration=180, penalty=0} | Room{number=12, capacity=45, penalty=30} ]]
+[[ Exam{number=432, duration=120, #students=162} | Period{number=26, date=2005-04-28, time=09:30, duration=180, penalty=0} | Room{number=13, capacity=45, penalty=0} ]]
+[[ Exam{number=205, duration=120, #students=84} | Period{number=28, date=2005-04-29, time=09:30, duration=180, penalty=0} | Room{number=8, capacity=70, penalty=0} ]]
+[[ Exam{number=610, duration=120, #students=199} | Period{number=21, date=2005-04-25, time=14:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=897, duration=120, #students=46} | Period{number=23, date=2005-04-26, time=14:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=129, duration=90, #students=122} | Period{number=25, date=2005-04-27, time=14:30, duration=180, penalty=0} | Room{number=5, capacity=110, penalty=0} ]]
+[[ Exam{number=684, duration=180, #students=62} | Period{number=27, date=2005-04-28, time=14:30, duration=180, penalty=0} | Room{number=4, capacity=110, penalty=0} ]]
+[[ Exam{number=230, duration=90, #students=247} | Period{number=29, date=2005-04-29, time=14:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=644, duration=180, #students=280} | Period{number=30, date=2005-05-02, time=09:30, duration=180, penalty=0} | Room{number=4, capacity=110, penalty=0} ]]
+[[ Exam{number=128, duration=120, #students=166} | Period{number=32, date=2005-05-03, time=09:30, duration=180, penalty=0} | Room{number=13, capacity=45, penalty=0} ]]
+[[ Exam{number=138, duration=120, #students=285} | Period{number=34, date=2005-05-04, time=09:30, duration=180, penalty=0} | Room{number=9, capacity=110, penalty=0} ]]
+[[ Exam{number=994, duration=180, #students=80} | Period{number=36, date=2005-05-05, time=09:30, duration=180, penalty=0} | Room{number=9, capacity=110, penalty=0} ]]
+[[ Exam{number=106, duration=180, #students=315} | Period{number=38, date=2005-05-06, time=09:30, duration=180, penalty=0} | Room{number=10, capacity=110, penalty=0} ]]
+[[ Exam{number=220, duration=120, #students=213} | Period{number=40, date=2005-05-09, time=09:30, duration=180, penalty=0} | Room{number=12, capacity=45, penalty=30} ]]
+[[ Exam{number=1045, duration=120, #students=195} | Period{number=42, date=2005-05-10, time=09:30, duration=180, penalty=0} | Room{number=4, capacity=110, penalty=0} ]]
+[[ Exam{number=107, duration=120, #students=299} | Period{number=44, date=2005-05-11, time=09:30, duration=180, penalty=0} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=146, duration=120, #students=96} | Period{number=46, date=2005-05-12, time=09:30, duration=180, penalty=0} | Room{number=4, capacity=110, penalty=0} ]]
+[[ Exam{number=1025, duration=180, #students=153} | Period{number=48, date=2005-05-13, time=09:30, duration=180, penalty=0} | Room{number=10, capacity=110, penalty=0} ]]
+[[ Exam{number=429, duration=120, #students=104} | Period{number=31, date=2005-05-02, time=14:30, duration=180, penalty=0} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=977, duration=180, #students=128} | Period{number=33, date=2005-05-03, time=14:30, duration=180, penalty=0} | Room{number=3, capacity=210, penalty=50} ]]
+[[ Exam{number=111, duration=180, #students=249} | Period{number=35, date=2005-05-04, time=14:30, duration=180, penalty=0} | Room{number=6, capacity=70, penalty=0} ]]
+[[ Exam{number=1051, duration=120, #students=109} | Period{number=37, date=2005-05-05, time=14:30, duration=180, penalty=0} | Room{number=10, capacity=110, penalty=0} ]]
+[[ Exam{number=551, duration=120, #students=27} | Period{number=39, date=2005-05-06, time=14:30, duration=180, penalty=0} | Room{number=1, capacity=90, penalty=0} ]]
+[[ Exam{number=972, duration=180, #students=117} | Period{number=41, date=2005-05-09, time=14:30, duration=180, penalty=0} | Room{number=6, capacity=70, penalty=0} ]]
+[[ Exam{number=899, duration=120, #students=35} | Period{number=43, date=2005-05-10, time=14:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=975, duration=180, #students=106} | Period{number=45, date=2005-05-11, time=14:30, duration=180, penalty=0} | Room{number=5, capacity=110, penalty=0} ]]
+[[ Exam{number=1064, duration=90, #students=128} | Period{number=47, date=2005-05-12, time=14:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=378, duration=90, #students=120} | Period{number=49, date=2005-05-13, time=14:30, duration=180, penalty=0} | Room{number=1, capacity=90, penalty=0} ]]
+[[ Exam{number=483, duration=120, #students=33} | Period{number=50, date=2005-05-16, time=09:30, duration=180, penalty=0} | Room{number=8, capacity=70, penalty=0} ]]
+[[ Exam{number=807, duration=120, #students=27} | Period{number=52, date=2005-05-17, time=09:30, duration=180, penalty=0} | Room{number=12, capacity=45, penalty=30} ]]
+[[ Exam{number=256, duration=120, #students=81} | Period{number=54, date=2005-05-18, time=09:30, duration=180, penalty=0} | Room{number=1, capacity=90, penalty=0} ]]
+[[ Exam{number=104, duration=180, #students=153} | Period{number=56, date=2005-05-19, time=09:30, duration=180, penalty=0} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=133, duration=90, #students=65} | Period{number=58, date=2005-05-20, time=09:30, duration=180, penalty=0} | Room{number=4, capacity=110, penalty=0} ]]
+[[ Exam{number=173, duration=120, #students=60} | Period{number=51, date=2005-05-16, time=14:30, duration=180, penalty=0} | Room{number=10, capacity=110, penalty=0} ]]
+[[ Exam{number=103, duration=180, #students=293} | Period{number=53, date=2005-05-17, time=14:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=554, duration=120, #students=31} | Period{number=55, date=2005-05-18, time=14:30, duration=180, penalty=0} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=685, duration=180, #students=45} | Period{number=57, date=2005-05-19, time=14:30, duration=180, penalty=0} | Room{number=6, capacity=70, penalty=0} ]]
+[[ Exam{number=135, duration=120, #students=26} | Period{number=59, date=2005-05-20, time=14:30, duration=180, penalty=0} | Room{number=8, capacity=70, penalty=0} ]]
+[[ Exam{number=450, duration=120, #students=36} | Period{number=60, date=2005-05-23, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=1089, duration=90, #students=82} | Period{number=61, date=2005-05-23, time=14:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=391, duration=120, #students=90} | Period{number=62, date=2005-05-24, time=09:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=481, duration=120, #students=36} | Period{number=63, date=2005-05-24, time=14:30, duration=180, penalty=0} | Room{number=12, capacity=45, penalty=30} ]]
+[[ Exam{number=763, duration=120, #students=26} | Period{number=64, date=2005-05-25, time=09:30, duration=180, penalty=0} | Room{number=12, capacity=45, penalty=30} ]]
+[[ Exam{number=974, duration=180, #students=120} | Period{number=66, date=2005-05-26, time=09:30, duration=180, penalty=0} | Room{number=1, capacity=90, penalty=0} ]]
+[[ Exam{number=650, duration=120, #students=33} | Period{number=68, date=2005-05-27, time=09:30, duration=180, penalty=0} | Room{number=3, capacity=210, penalty=50} ]]
+[[ Exam{number=784, duration=180, #students=43} | Period{number=70, date=2005-05-30, time=09:30, duration=180, penalty=0} | Room{number=11, capacity=35, penalty=70} ]]
+[[ Exam{number=893, duration=120, #students=27} | Period{number=72, date=2005-05-31, time=09:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=971, duration=180, #students=111} | Period{number=74, date=2005-06-01, time=09:30, duration=180, penalty=0} | Room{number=2, capacity=210, penalty=0} ]]
+
+
+BEST SOLUTION FOR TEST RUN 6
+========================================
+Fitness: 108670.0
+Heuristic combination: BBHBBE
+Solution: 
+[[ Exam{number=1059, duration=120, #students=431} | Period{number=0, date=2005-04-11, time=09:30, duration=180, penalty=0} | Room{number=6, capacity=70, penalty=0} ]]
+[[ Exam{number=141, duration=120, #students=296} | Period{number=2, date=2005-04-12, time=09:30, duration=180, penalty=0} | Room{number=1, capacity=90, penalty=0} ]]
+[[ Exam{number=969, duration=180, #students=174} | Period{number=4, date=2005-04-13, time=09:30, duration=180, penalty=0} | Room{number=0, capacity=240, penalty=0} ]]
+[[ Exam{number=370, duration=120, #students=219} | Period{number=6, date=2005-04-14, time=09:30, duration=180, penalty=0} | Room{number=4, capacity=110, penalty=0} ]]
+[[ Exam{number=406, duration=120, #students=301} | Period{number=8, date=2005-04-15, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=382, duration=180, #students=366} | Period{number=10, date=2005-04-18, time=09:30, duration=180, penalty=0} | Room{number=9, capacity=110, penalty=0} ]]
+[[ Exam{number=628, duration=120, #students=155} | Period{number=12, date=2005-04-19, time=09:30, duration=180, penalty=0} | Room{number=13, capacity=45, penalty=0} ]]
+[[ Exam{number=408, duration=120, #students=194} | Period{number=14, date=2005-04-20, time=09:30, duration=180, penalty=0} | Room{number=11, capacity=35, penalty=70} ]]
+[[ Exam{number=120, duration=150, #students=281} | Period{number=16, date=2005-04-21, time=09:30, duration=180, penalty=0} | Room{number=4, capacity=110, penalty=0} ]]
+[[ Exam{number=264, duration=90, #students=349} | Period{number=18, date=2005-04-22, time=09:30, duration=180, penalty=0} | Room{number=11, capacity=35, penalty=70} ]]
+[[ Exam{number=91, duration=60, #students=394} | Period{number=20, date=2005-04-25, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=88, duration=60, #students=333} | Period{number=22, date=2005-04-26, time=09:30, duration=180, penalty=50} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=358, duration=120, #students=610} | Period{number=24, date=2005-04-27, time=09:30, duration=180, penalty=0} | Room{number=12, capacity=45, penalty=30} ]]
+[[ Exam{number=92, duration=60, #students=295} | Period{number=26, date=2005-04-28, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=242, duration=120, #students=523} | Period{number=28, date=2005-04-29, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=403, duration=180, #students=177} | Period{number=30, date=2005-05-02, time=09:30, duration=180, penalty=0} | Room{number=0, capacity=240, penalty=0} ]]
+[[ Exam{number=973, duration=180, #students=126} | Period{number=32, date=2005-05-03, time=09:30, duration=180, penalty=0} | Room{number=5, capacity=110, penalty=0} ]]
+[[ Exam{number=1048, duration=180, #students=204} | Period{number=34, date=2005-05-04, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=631, duration=120, #students=115} | Period{number=36, date=2005-05-05, time=09:30, duration=180, penalty=0} | Room{number=10, capacity=110, penalty=0} ]]
+[[ Exam{number=407, duration=120, #students=190} | Period{number=38, date=2005-05-06, time=09:30, duration=180, penalty=0} | Room{number=3, capacity=210, penalty=50} ]]
+[[ Exam{number=432, duration=120, #students=162} | Period{number=40, date=2005-05-09, time=09:30, duration=180, penalty=0} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=205, duration=120, #students=84} | Period{number=42, date=2005-05-10, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=610, duration=120, #students=199} | Period{number=44, date=2005-05-11, time=09:30, duration=180, penalty=0} | Room{number=4, capacity=110, penalty=0} ]]
+[[ Exam{number=897, duration=120, #students=46} | Period{number=46, date=2005-05-12, time=09:30, duration=180, penalty=0} | Room{number=9, capacity=110, penalty=0} ]]
+[[ Exam{number=129, duration=90, #students=122} | Period{number=48, date=2005-05-13, time=09:30, duration=180, penalty=0} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=643, duration=120, #students=455} | Period{number=50, date=2005-05-16, time=09:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=209, duration=180, #students=416} | Period{number=52, date=2005-05-17, time=09:30, duration=180, penalty=0} | Room{number=8, capacity=70, penalty=0} ]]
+[[ Exam{number=326, duration=120, #students=360} | Period{number=54, date=2005-05-18, time=09:30, duration=180, penalty=0} | Room{number=1, capacity=90, penalty=0} ]]
+[[ Exam{number=106, duration=180, #students=315} | Period{number=56, date=2005-05-19, time=09:30, duration=180, penalty=0} | Room{number=3, capacity=210, penalty=50} ]]
+[[ Exam{number=107, duration=120, #students=299} | Period{number=58, date=2005-05-20, time=09:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+
+
+BEST SOLUTION FOR TEST RUN 7
+========================================
+Fitness: 108180.0
+Heuristic combination: BBBBBBB
+Solution: 
+[[ Exam{number=1059, duration=120, #students=431} | Period{number=0, date=2005-04-11, time=09:30, duration=180, penalty=0} | Room{number=8, capacity=70, penalty=0} ]]
+[[ Exam{number=141, duration=120, #students=296} | Period{number=2, date=2005-04-12, time=09:30, duration=180, penalty=0} | Room{number=9, capacity=110, penalty=0} ]]
+[[ Exam{number=969, duration=180, #students=174} | Period{number=4, date=2005-04-13, time=09:30, duration=180, penalty=0} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=370, duration=120, #students=219} | Period{number=6, date=2005-04-14, time=09:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=406, duration=120, #students=301} | Period{number=8, date=2005-04-15, time=09:30, duration=180, penalty=0} | Room{number=9, capacity=110, penalty=0} ]]
+[[ Exam{number=382, duration=180, #students=366} | Period{number=10, date=2005-04-18, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=628, duration=120, #students=155} | Period{number=12, date=2005-04-19, time=09:30, duration=180, penalty=0} | Room{number=11, capacity=35, penalty=70} ]]
+[[ Exam{number=408, duration=120, #students=194} | Period{number=14, date=2005-04-20, time=09:30, duration=180, penalty=0} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=120, duration=150, #students=281} | Period{number=16, date=2005-04-21, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=264, duration=90, #students=349} | Period{number=18, date=2005-04-22, time=09:30, duration=180, penalty=0} | Room{number=0, capacity=240, penalty=0} ]]
+[[ Exam{number=403, duration=180, #students=177} | Period{number=20, date=2005-04-25, time=09:30, duration=180, penalty=0} | Room{number=2, capacity=210, penalty=0} ]]
+[[ Exam{number=973, duration=180, #students=126} | Period{number=22, date=2005-04-26, time=09:30, duration=180, penalty=50} | Room{number=3, capacity=210, penalty=50} ]]
+[[ Exam{number=1048, duration=180, #students=204} | Period{number=24, date=2005-04-27, time=09:30, duration=180, penalty=0} | Room{number=4, capacity=110, penalty=0} ]]
+[[ Exam{number=242, duration=120, #students=523} | Period{number=26, date=2005-04-28, time=09:30, duration=180, penalty=0} | Room{number=9, capacity=110, penalty=0} ]]
+[[ Exam{number=631, duration=120, #students=115} | Period{number=28, date=2005-04-29, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=407, duration=120, #students=190} | Period{number=30, date=2005-05-02, time=09:30, duration=180, penalty=0} | Room{number=4, capacity=110, penalty=0} ]]
+[[ Exam{number=432, duration=120, #students=162} | Period{number=32, date=2005-05-03, time=09:30, duration=180, penalty=0} | Room{number=0, capacity=240, penalty=0} ]]
+[[ Exam{number=205, duration=120, #students=84} | Period{number=34, date=2005-05-04, time=09:30, duration=180, penalty=0} | Room{number=13, capacity=45, penalty=0} ]]
+[[ Exam{number=610, duration=120, #students=199} | Period{number=36, date=2005-05-05, time=09:30, duration=180, penalty=0} | Room{number=3, capacity=210, penalty=50} ]]
+[[ Exam{number=897, duration=120, #students=46} | Period{number=38, date=2005-05-06, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=129, duration=90, #students=122} | Period{number=40, date=2005-05-09, time=09:30, duration=180, penalty=0} | Room{number=5, capacity=110, penalty=0} ]]
+[[ Exam{number=684, duration=180, #students=62} | Period{number=42, date=2005-05-10, time=09:30, duration=180, penalty=0} | Room{number=8, capacity=70, penalty=0} ]]
+[[ Exam{number=230, duration=90, #students=247} | Period{number=44, date=2005-05-11, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=644, duration=180, #students=280} | Period{number=46, date=2005-05-12, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=128, duration=120, #students=166} | Period{number=48, date=2005-05-13, time=09:30, duration=180, penalty=0} | Room{number=8, capacity=70, penalty=0} ]]
+[[ Exam{number=138, duration=120, #students=285} | Period{number=50, date=2005-05-16, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=994, duration=180, #students=80} | Period{number=52, date=2005-05-17, time=09:30, duration=180, penalty=0} | Room{number=1, capacity=90, penalty=0} ]]
+[[ Exam{number=106, duration=180, #students=315} | Period{number=54, date=2005-05-18, time=09:30, duration=180, penalty=0} | Room{number=12, capacity=45, penalty=30} ]]
+[[ Exam{number=220, duration=120, #students=213} | Period{number=56, date=2005-05-19, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=1045, duration=120, #students=195} | Period{number=58, date=2005-05-20, time=09:30, duration=180, penalty=0} | Room{number=12, capacity=45, penalty=30} ]]
+[[ Exam{number=107, duration=120, #students=299} | Period{number=60, date=2005-05-23, time=09:30, duration=180, penalty=0} | Room{number=9, capacity=110, penalty=0} ]]
+[[ Exam{number=146, duration=120, #students=96} | Period{number=62, date=2005-05-24, time=09:30, duration=180, penalty=0} | Room{number=4, capacity=110, penalty=0} ]]
+[[ Exam{number=1025, duration=180, #students=153} | Period{number=64, date=2005-05-25, time=09:30, duration=180, penalty=0} | Room{number=13, capacity=45, penalty=0} ]]
+[[ Exam{number=429, duration=120, #students=104} | Period{number=66, date=2005-05-26, time=09:30, duration=180, penalty=0} | Room{number=0, capacity=240, penalty=0} ]]
+[[ Exam{number=643, duration=120, #students=455} | Period{number=68, date=2005-05-27, time=09:30, duration=180, penalty=0} | Room{number=1, capacity=90, penalty=0} ]]
+
+
+BEST SOLUTION FOR TEST RUN 8
+========================================
+Fitness: 109100.0
+Heuristic combination: EB
+Solution: 
+[[ Exam{number=358, duration=120, #students=610} | Period{number=0, date=2005-04-11, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=242, duration=120, #students=523} | Period{number=2, date=2005-04-12, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=643, duration=120, #students=455} | Period{number=4, date=2005-04-13, time=09:30, duration=180, penalty=0} | Room{number=6, capacity=70, penalty=0} ]]
+[[ Exam{number=1059, duration=120, #students=431} | Period{number=6, date=2005-04-14, time=09:30, duration=180, penalty=0} | Room{number=13, capacity=45, penalty=0} ]]
+[[ Exam{number=209, duration=180, #students=416} | Period{number=8, date=2005-04-15, time=09:30, duration=180, penalty=0} | Room{number=10, capacity=110, penalty=0} ]]
+[[ Exam{number=141, duration=120, #students=296} | Period{number=10, date=2005-04-18, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=969, duration=180, #students=174} | Period{number=12, date=2005-04-19, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=370, duration=120, #students=219} | Period{number=14, date=2005-04-20, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=406, duration=120, #students=301} | Period{number=16, date=2005-04-21, time=09:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=382, duration=180, #students=366} | Period{number=18, date=2005-04-22, time=09:30, duration=180, penalty=0} | Room{number=1, capacity=90, penalty=0} ]]
+
+
+BEST SOLUTION FOR TEST RUN 9
+========================================
+Fitness: 109200.0
+Heuristic combination: B
+Solution: 
+[[ Exam{number=1059, duration=120, #students=431} | Period{number=0, date=2005-04-11, time=09:30, duration=180, penalty=0} | Room{number=7, capacity=75, penalty=0} ]]
+[[ Exam{number=141, duration=120, #students=296} | Period{number=2, date=2005-04-12, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=969, duration=180, #students=174} | Period{number=4, date=2005-04-13, time=09:30, duration=180, penalty=0} | Room{number=0, capacity=240, penalty=0} ]]
+[[ Exam{number=370, duration=120, #students=219} | Period{number=6, date=2005-04-14, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+[[ Exam{number=406, duration=120, #students=301} | Period{number=8, date=2005-04-15, time=09:30, duration=180, penalty=0} | Room{number=14, capacity=1000, penalty=0} ]]
+
+
+
+Average Time per Test Run: PT15M03.429176S

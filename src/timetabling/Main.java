@@ -7,6 +7,8 @@ import timetabling.utils.ProblemReader;
 
 import java.io.IOException;
 import java.io.PrintWriter;
+import java.time.Duration;
+import java.time.LocalDateTime;
 
 public class Main {
 	public static void main(String[] args) {
@@ -17,7 +19,7 @@ public class Main {
 			GenAlg genAlg = new GenAlg(seed, heuristics);
 			genAlg.setPopulationSize(50);
 			genAlg.setTournamentSize(10);
-			genAlg.setNoOfGenerations(100);
+			genAlg.setNoOfGenerations(10);
 			genAlg.setMutationRate(0.05);
 			genAlg.setCrossoverRate(0.75);
 			genAlg.setInitialMaxLength(10);
@@ -43,6 +45,8 @@ public class Main {
 
 	private static void runTests(GenAlg genAlg, String filePath) throws IOException {
 		StringBuilder stringBuilder = new StringBuilder();
+
+		LocalDateTime start = LocalDateTime.now();
 		for (int i = 0; i < 10; i++) {
 			genAlg.setProblem(ProblemReader.problemFromFile(filePath));
 			InitialSoln solution = genAlg.evolve();
@@ -52,6 +56,9 @@ public class Main {
 			stringBuilder.append("Heuristic combination: ").append(solution.getHeuCom()).append("\n");
 			stringBuilder.append("Solution: ").append(solution.solnToString()).append("\n\n\n");
 		}
+		LocalDateTime end = LocalDateTime.now();
+		Duration avgTime = Duration.between(start, end).dividedBy(10);
+		stringBuilder.append("Average Time per Test Run: ").append(avgTime);
 
 		try (PrintWriter out = new PrintWriter("solutions/" + filePath.substring(filePath.lastIndexOf("/") + 1))) {
 			out.println(stringBuilder.toString());
