@@ -6,7 +6,6 @@ import timetabling.domain.*;
 import java.util.List;
 
 public class Problem extends ProblemDomain {
-	public final String name;
 	public final List<Exam> exams;
 	public final List<Period> periods;
 	public final List<Room> rooms;
@@ -25,8 +24,7 @@ public class Problem extends ProblemDomain {
 	 * @param roomHardConstraints     - The set of hard constraints for rooms.
 	 * @param institutionalWeightings - The set of institutional weightings which serve as soft constraints.
 	 */
-	public Problem(String name, List<Exam> exams, List<Period> periods, List<Room> rooms, List<PeriodHardConstraint> periodHardConstraints, List<RoomHardConstraint> roomHardConstraints, List<InstitutionalWeighting> institutionalWeightings) {
-		this.name = name;
+	public Problem(List<Exam> exams, List<Period> periods, List<Room> rooms, List<PeriodHardConstraint> periodHardConstraints, List<RoomHardConstraint> roomHardConstraints, List<InstitutionalWeighting> institutionalWeightings) {
 		this.exams = exams;
 		this.periods = periods;
 		this.rooms = rooms;
@@ -63,10 +61,8 @@ public class Problem extends ProblemDomain {
 
 		for (char character : heuristicComb.toCharArray()) {
 			HeuristicApplier lowLevelHeuristicApplier = new HeuristicApplier(this, character);
-			Solution newSolution = lowLevelHeuristicApplier.applyToSolution(solution);
-			while (newSolution.getFitness() < solution.getFitness()) {
-				solution = newSolution;
-				newSolution = lowLevelHeuristicApplier.applyToSolution(solution);
+			for (int i = 0; i < 5; i++) {
+				solution = lowLevelHeuristicApplier.applyToSolution(solution);
 			}
 		}
 
