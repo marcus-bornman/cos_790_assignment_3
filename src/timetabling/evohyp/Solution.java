@@ -257,7 +257,9 @@ public class Solution extends InitialSoln {
 				.sorted((e1, e2) -> e2.students.size() - e1.students.size())
 				.collect(Collectors.toList()).subList(0, weighting.paramOne);
 
-		List<Period> lastPeriods = problem.periods.subList(problem.periods.size() - weighting.paramTwo, problem.periods.size());
+		int lastPeriodIndex = problem.periods.size() - weighting.paramTwo;
+		if (lastPeriodIndex < 0) lastPeriodIndex = 0;
+		List<Period> lastPeriods = problem.periods.subList(lastPeriodIndex, problem.periods.size());
 
 		for (Exam exam : largestExams) {
 			Booking examBooking = bookings.stream().filter(b -> b.exam.number == exam.number).findFirst().orElse(null);

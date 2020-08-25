@@ -17,7 +17,7 @@ public class Main {
 			GenAlg genAlg = new GenAlg(seed, heuristics);
 			genAlg.setPopulationSize(50);
 			genAlg.setTournamentSize(10);
-			genAlg.setNoOfGenerations(100);
+			genAlg.setNoOfGenerations(1);
 			genAlg.setMutationRate(0.05);
 			genAlg.setCrossoverRate(0.75);
 			genAlg.setInitialMaxLength(10);
@@ -43,14 +43,14 @@ public class Main {
 
 	private static void runTests(GenAlg genAlg, String filePath) throws IOException {
 		StringBuilder stringBuilder = new StringBuilder();
-		for (int i = 0; i < 10; i++) {
+		for (int i = 0; i < 1; i++) {
 			genAlg.setProblem(ProblemReader.problemFromFile(filePath));
 			InitialSoln solution = genAlg.evolve();
 
 			stringBuilder.append("BEST SOLUTION FOR TEST RUN ").append(i).append("\n========================================\n");
 			stringBuilder.append("Fitness: ").append(solution.getFitness()).append("\n");
 			stringBuilder.append("Heuristic combination: ").append(solution.getHeuCom()).append("\n");
-			stringBuilder.append("Solution: ").append(solution.solnToString());
+			stringBuilder.append("Solution: ").append(solution.solnToString()).append("\n\n\n");
 		}
 
 		try (PrintWriter out = new PrintWriter("solutions/" + filePath.substring(filePath.lastIndexOf("/") + 1))) {
