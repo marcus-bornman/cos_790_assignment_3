@@ -1,4 +1,4 @@
-package timetabling.domain;
+package domain;
 
 /**
  * Models a hard constraint associated with a room.

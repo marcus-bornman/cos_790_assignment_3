@@ -1,4 +1,4 @@
-package timetabling.domain;
+package domain;
 
 /**
  * Models a room in which an exam can be scheduled.

@@ -1,4 +1,4 @@
-package timetabling.domain;
+package domain;
 
 import java.util.List;
 

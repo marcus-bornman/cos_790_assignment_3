@@ -1,7 +1,7 @@
-package timetabling.evohyp;
+package evohyp;
 
 import initialsoln.InitialSoln;
-import timetabling.domain.*;
+import domain.*;
 
 import java.util.HashSet;
 import java.util.List;

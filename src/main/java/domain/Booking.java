@@ -1,4 +1,4 @@
-package timetabling.domain;
+package domain;
 
 /**
  * Models a specific booking for an exam.

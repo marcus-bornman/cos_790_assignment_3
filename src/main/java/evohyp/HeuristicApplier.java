@@ -1,9 +1,9 @@
-package timetabling.evohyp;
+package evohyp;
 
-import timetabling.domain.Booking;
-import timetabling.domain.Exam;
-import timetabling.domain.Period;
-import timetabling.domain.Room;
+import domain.Booking;
+import domain.Exam;
+import domain.Period;
+import domain.Room;
 
 import java.util.ArrayList;
 import java.util.List;

@@ -1,7 +1,7 @@
-package timetabling.evohyp;
+package evohyp;
 
 import problemdomain.ProblemDomain;
-import timetabling.domain.*;
+import domain.*;
 
 import java.util.List;
 

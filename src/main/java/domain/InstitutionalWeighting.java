@@ -1,4 +1,4 @@
-package timetabling.domain;
+package domain;
 
 /**
  * Models an Institutional Weighting (soft constraint).

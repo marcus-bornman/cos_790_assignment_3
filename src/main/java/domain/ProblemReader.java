@@ -1,7 +1,7 @@
-package timetabling.utils;
+package domain;
 
-import timetabling.evohyp.Problem;
-import timetabling.domain.*;
+import domain.*;
+import evohyp.Problem;
 
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;

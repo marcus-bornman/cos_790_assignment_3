@@ -1,9 +1,7 @@
-package timetabling;
-
 import genalg.GenAlg;
 import initialsoln.InitialSoln;
-import timetabling.evohyp.HeuristicApplier;
-import timetabling.utils.ProblemReader;
+import evohyp.HeuristicApplier;
+import domain.ProblemReader;
 
 import java.io.IOException;
 import java.io.PrintWriter;
