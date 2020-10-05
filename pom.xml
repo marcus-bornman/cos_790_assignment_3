@@ -7,10 +7,11 @@
     <groupId>com.marcusbornman</groupId>
     <artifactId>cos_790_assignment_2</artifactId>
     <version>1.0-SNAPSHOT</version>
+
     <properties>
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
-        <maven.compiler.source>1.8</maven.compiler.source>
-        <maven.compiler.target>1.8</maven.compiler.target>
+        <maven.compiler.source>11</maven.compiler.source>
+        <maven.compiler.target>11</maven.compiler.target>
     </properties>
 
     <repositories>
@@ -27,12 +28,12 @@
     <dependencies>
         <dependency>
             <groupId>com.github.marcus-bornman</groupId>
-            <artifactId>cos_790_assignment_1</artifactId>
-            <version>master-SNAPSHOT</version>
+            <artifactId>itc2007</artifactId>
+            <version>master-135dc15e56-1</version>
         </dependency>
         <dependency>
             <groupId>za.ac.up</groupId>
-            <artifactId>genalg</artifactId>
+            <artifactId>distrgenalg</artifactId>
             <version>1.1</version>
         </dependency>
         <dependency>
@@ -56,7 +57,7 @@
                 <configuration>
                     <archive>
                         <manifest>
-                            <mainClass>Main</mainClass>
+                            <mainClass>com.marcusbornman.cos_790_assignment_2.Main</mainClass>
                         </manifest>
                     </archive>
                     <descriptorRefs>
