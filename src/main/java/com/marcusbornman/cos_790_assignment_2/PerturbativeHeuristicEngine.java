@@ -1,93 +1,93 @@
-package evohyp;
+package com.marcusbornman.cos_790_assignment_2;
 
-import domain.Booking;
-import domain.Exam;
-import domain.Period;
-import domain.Room;
+import uk.ac.qub.cs.itc2007.*;
 
 import java.util.ArrayList;
 import java.util.List;
-import java.util.concurrent.ThreadLocalRandom;
+import java.util.Random;
 import java.util.stream.Collectors;
 import java.util.stream.IntStream;
 
 /**
- * A class for applying Low-level heuristics of the Timetabling Problem.
+ * A class for applying constructive Low-level heuristics to an examination timetabling problem to produce a solution
+ * to the problem.
  */
-public class HeuristicApplier {
-	public static String SUPPORTED_HEURISTICS = "ABCDEFGHI";
+public class PerturbativeHeuristicEngine {
+	public static final String SUPPORTED_HEURISTICS = "ABCDEFGHI";
+	public static Random random = new Random(0);
 
-	private final Problem problem;
-	private final Character character;
+	private final ExamTimetablingProblem problem;
 
-	public HeuristicApplier(Problem problem, Character heuristicChar) {
+	/**
+	 * @param problem - the problem for which this engine is going to produce solutions.
+	 */
+	public PerturbativeHeuristicEngine(ExamTimetablingProblem problem) {
 		this.problem = problem;
-		this.character = heuristicChar;
 	}
 
 	/**
-	 * Apply the heuristic to the given solution.
-	 *
+	 * @param heuristicChar - the character representative of the heuristic to apply.
 	 * @param solution - the solution to which to apply the heuristic.
-	 * @return a new solution with the heuristic applied.
+	 * @return a new solution with the given heuristic applied.
 	 */
-	public final Solution applyToSolution(Solution solution) {
+	public ExamTimetablingSolution applyToSolution(Character heuristicChar, ExamTimetablingSolution solution) {
 		Exam exam;
 		Period period;
-		Room room;
 
-		if (character == 'A') {
+		if (heuristicChar == 'A') {
 			exam = findExamWithMostClashes(solution);
 			period = findPeriodWithLeastBookings(solution);
-			room = findRandomRoom();
-		} else if (character == 'B') {
+		} else if (heuristicChar == 'B') {
 			exam = findExamWithMostClashes(solution);
 			period = findPeriodWithLeastOnSameDay(solution);
-			room = findRandomRoom();
-		} else if (character == 'C') {
+		} else if (heuristicChar == 'C') {
 			exam = findExamWithMostClashes(solution);
 			period = findPeriodWithLeastStudents(solution);
-			room = findRandomRoom();
-		} else if (character == 'D') {
+		} else if (heuristicChar == 'D') {
 			exam = findExamWithMostStudents(solution);
 			period = findPeriodWithLeastBookings(solution);
-			room = findRandomRoom();
-		} else if (character == 'E') {
+		} else if (heuristicChar == 'E') {
 			exam = findExamWithMostStudents(solution);
 			period = findPeriodWithLeastOnSameDay(solution);
-			room = findRandomRoom();
-		} else if (character == 'F') {
+		} else if (heuristicChar == 'F') {
 			exam = findExamWithMostStudents(solution);
 			period = findPeriodWithLeastStudents(solution);
-			room = findRandomRoom();
-		} else if (character == 'G') {
+		} else if (heuristicChar == 'G') {
 			exam = findExamWithMostWeightedClashes(solution);
 			period = findPeriodWithLeastBookings(solution);
-			room = findRandomRoom();
-		} else if (character == 'H') {
+		} else if (heuristicChar == 'H') {
 			exam = findExamWithMostWeightedClashes(solution);
 			period = findPeriodWithLeastOnSameDay(solution);
-			room = findRandomRoom();
-		} else if (character == 'I') {
+		} else if (heuristicChar == 'I') {
 			exam = findExamWithMostWeightedClashes(solution);
 			period = findPeriodWithLeastStudents(solution);
-			room = findRandomRoom();
 		} else {
-			throw new IllegalArgumentException(character + " is not a supported heuristic character.");
+			throw new IllegalArgumentException(heuristicChar + " is not a supported heuristic character.");
 		}
+		Room room = randomRoom();
 
-		if (exam == null || period == null || room == null) return solution;
-		List<Booking> bookings = new ArrayList<>(solution.bookings);
+		return applyToSolution(solution, exam, period, room);
+	}
+
+	/**
+	 * @param solution the solution to which to add a new booking.
+	 * @param exam     the exam for the new booking.
+	 * @param period   the period for the new booking.
+	 * @param room     the room for the new booking.
+	 * @return the new solution with the new booking added.
+	 */
+	private ExamTimetablingSolution applyToSolution(ExamTimetablingSolution solution, Exam exam, Period period, Room room) {
 		Booking booking = new Booking(exam, period, room);
-		bookings.add(booking);
-		return new Solution(problem, bookings);
+		List<Booking> newBookings = new ArrayList<>(solution.bookings);
+		newBookings.add(booking);
+		return new ExamTimetablingSolution(problem, newBookings);
 	}
 
 	/**
 	 * @param solution - the current solution for which to select the next exam.
 	 * @return The examination with the most clashes (ie. shares students with the most other exams).
 	 */
-	public Exam findExamWithMostClashes(Solution solution) {
+	public Exam findExamWithMostClashes(ExamTimetablingSolution solution) {
 		List<Exam> unbookedExams = problem.exams.stream()
 				.filter(e -> solution.bookings.stream().noneMatch(b -> b.exam.number == e.number))
 				.collect(Collectors.toList());
@@ -109,18 +109,29 @@ public class HeuristicApplier {
 	 * @param solution - the current solution for which to select the next exam.
 	 * @return The examination with the most students enrolled.
 	 */
-	public Exam findExamWithMostStudents(Solution solution) {
-		return problem.exams.stream()
+	public Exam findExamWithMostStudents(ExamTimetablingSolution solution) {
+		List<Exam> unbookedExams = problem.exams.stream()
 				.filter(e -> solution.bookings.stream().noneMatch(b -> b.exam.number == e.number))
-				.sorted((e1, e2) -> e2.students.size() - e1.students.size())
-				.collect(Collectors.toList()).get(0);
+				.collect(Collectors.toList());
+
+		Exam selected = null;
+		int selectedCount = Integer.MIN_VALUE;
+		for (Exam exam : unbookedExams) {
+			int examCount = exam.students.size();
+			if (exam.students.size() > selectedCount) {
+				selected = exam;
+				selectedCount = examCount;
+			}
+		}
+
+		return selected;
 	}
 
 	/**
 	 * @param solution - the current solution for which to select the next exam.
 	 * @return The examination with the largest number of students involved in clashes is scheduled first.
 	 */
-	public Exam findExamWithMostWeightedClashes(Solution solution) {
+	public Exam findExamWithMostWeightedClashes(ExamTimetablingSolution solution) {
 		List<Exam> unbookedExams = problem.exams.stream()
 				.filter(e -> solution.bookings.stream().noneMatch(b -> b.exam.number == e.number))
 				.collect(Collectors.toList());
@@ -142,7 +153,7 @@ public class HeuristicApplier {
 	 * @param solution - the current solution for which to select the next period.
 	 * @return The period with the least number of current bookings.
 	 */
-	public Period findPeriodWithLeastBookings(Solution solution) {
+	public Period findPeriodWithLeastBookings(ExamTimetablingSolution solution) {
 		Period selected = null;
 		int selectedCount = Integer.MAX_VALUE;
 
@@ -162,7 +173,7 @@ public class HeuristicApplier {
 	 * @param solution - the current solution for which to select the next period.
 	 * @return The period with the least number of current bookings on the same day.
 	 */
-	public Period findPeriodWithLeastOnSameDay(Solution solution) {
+	public Period findPeriodWithLeastOnSameDay(ExamTimetablingSolution solution) {
 		Period selected = null;
 		int selectedCount = Integer.MAX_VALUE;
 
@@ -182,7 +193,7 @@ public class HeuristicApplier {
 	 * @param solution - the current solution for which to select the next period.
 	 * @return The period with the least number of current booked students.
 	 */
-	public Period findPeriodWithLeastStudents(Solution solution) {
+	public Period findPeriodWithLeastStudents(ExamTimetablingSolution solution) {
 		Period selected = null;
 		int selectedCount = Integer.MAX_VALUE;
 
@@ -205,7 +216,7 @@ public class HeuristicApplier {
 	/**
 	 * @return A random room.
 	 */
-	public Room findRandomRoom() {
-		return problem.rooms.get(ThreadLocalRandom.current().nextInt(0, problem.rooms.size()));
+	public Room randomRoom() {
+		return problem.rooms.get(random.nextInt(problem.rooms.size()));
 	}
 }
