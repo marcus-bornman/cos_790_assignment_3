@@ -49,7 +49,7 @@ public class Main {
 			throw new IllegalArgumentException(cl.getOptionValue("s") + " is not a valid search type. The available search types are 'singlepoint' and 'multipoint'.");
 		}
 
-		System.out.println("Performing search - " + search.toString() + ". Please be patient, this may take a while.");
+		System.out.println("Performing search - " + search.toString());
 		runExperiment(search, cl.getOptionValue("o"));
 		System.out.println("Search complete. See " + cl.getOptionValue("o") + " for experiment results.");
 	}
