@@ -11,10 +11,10 @@ import org.apache.commons.cli.ParseException;
 import uk.ac.qub.cs.itc2007.ExamTimetablingProblem;
 import uk.ac.qub.cs.itc2007.ExamTimetablingSolution;
 
+import java.io.File;
 import java.io.IOException;
 import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
-import java.nio.file.Path;
 import java.nio.file.Paths;
 import java.time.Duration;
 import java.time.LocalDateTime;
@@ -65,7 +65,7 @@ public class Main {
 				"Experimental Result",
 				"=========================================================",
 				"Search: " + search.toString(),
-				"Runtime: " + runtime.toMillis(),
+				"Runtime (in milliseconds): " + runtime.toMillis(),
 				"Distance to Feasibility: " + solution.distanceToFeasibility(),
 				"Soft Constraint Violations: " + solution.softConstraintViolations(),
 				"Objective Value: " + (solution.softConstraintViolations() * (solution.distanceToFeasibility() + 1)),
@@ -75,7 +75,9 @@ public class Main {
 				"=========================================================",
 				solution.toString()
 		);
-		Path file = Paths.get(outputFile);
-		Files.write(file, lines, StandardCharsets.UTF_8);
+
+		//noinspection ResultOfMethodCallIgnored
+		new File(outputFile).getParentFile().mkdirs();// to create file if it doesn't exist
+		Files.write(Paths.get(outputFile), lines, StandardCharsets.UTF_8);
 	}
 }
