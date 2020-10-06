@@ -16,7 +16,6 @@ public class SinglePointSearch extends HeuristicSearch {
 	public ExamTimetablingSolution execute() {
 		char[] heuristics = HeuristicEngine.SUPPORTED_HEURISTICS.toCharArray();
 		ExamTimetablingSolution currSolution = new ExamTimetablingSolution(problem, new ArrayList<>(initialSolution.bookings));
-		HeuristicEngine heuristicEngine = new HeuristicEngine(problem, seed);
 
 		for (int i = 0; i < problem.exams.size(); i++) {
 			ExamTimetablingSolution bestSolution = null;
