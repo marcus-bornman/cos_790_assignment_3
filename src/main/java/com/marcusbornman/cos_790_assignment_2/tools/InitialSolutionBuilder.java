@@ -30,17 +30,16 @@ public class InitialSolutionBuilder {
 		ExamTimetablingSolution currSolution = new ExamTimetablingSolution(problem, new ArrayList<>());
 		for (Exam exam : problem.exams) {
 			boolean scheduled = false;
-			for (Period period : problem.periods) {
-				for (Room room : problem.rooms) {
-					ExamTimetablingSolution newSolution = schedule(currSolution, exam, period, room);
+			Room room = problem.rooms.get(randomGenerator.nextInt(problem.rooms.size()));
 
-					if (newSolution.distanceToFeasibility() <= currSolution.distanceToFeasibility()) {
-						currSolution = newSolution;
-						scheduled = true;
-						break;
-					}
+			for (Period period : problem.periods) {
+				ExamTimetablingSolution newSolution = schedule(currSolution, exam, period, room);
+
+				if (newSolution.distanceToFeasibility() <= currSolution.distanceToFeasibility()) {
+					currSolution = newSolution;
+					scheduled = true;
+					break;
 				}
-				if (scheduled) break;
 			}
 			if (!scheduled) currSolution = scheduleRandomly(currSolution, exam);
 		}
