@@ -29,7 +29,7 @@
         <dependency>
             <groupId>com.github.marcus-bornman</groupId>
             <artifactId>itc2007</artifactId>
-            <version>master-135dc15e56-1</version>
+            <version>master-f1c2cb6205-1</version>
         </dependency>
         <dependency>
             <groupId>za.ac.up</groupId>
