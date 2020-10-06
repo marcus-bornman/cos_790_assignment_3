@@ -26,6 +26,6 @@ public class MultiPointSearch extends HeuristicSearch {
 
 	@Override
 	public String toString() {
-		return "singlepoint (seed=" + seed + ")";
+		return "multipoint (seed=" + seed + ")";
 	}
 }
