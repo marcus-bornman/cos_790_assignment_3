@@ -1,4 +1,4 @@
-package com.marcusbornman.cos_790_assignment_2;
+package com.marcusbornman.cos_790_assignment_2.search.multipoint;
 
 import initialsoln.InitialSoln;
 import uk.ac.qub.cs.itc2007.ExamTimetablingSolution;
@@ -8,7 +8,7 @@ public class EvohypSolution extends InitialSoln {
 
 	private Double fitness;
 
-	private final ExamTimetablingSolution solution;
+	public final ExamTimetablingSolution solution;
 
 	/**
 	 * @param solution - the problem that this solution will solve.

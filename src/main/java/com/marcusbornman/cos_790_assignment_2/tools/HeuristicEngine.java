@@ -1,25 +1,29 @@
-package com.marcusbornman.cos_790_assignment_2;
+package com.marcusbornman.cos_790_assignment_2.tools;
 
 import uk.ac.qub.cs.itc2007.*;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Random;
 import java.util.stream.Collectors;
 
 /**
  * A class for applying constructive Low-level heuristics to an examination timetabling problem to produce a solution
  * to the problem.
  */
-public class PerturbativeHeuristicEngine {
+public class HeuristicEngine {
 	public static final String SUPPORTED_HEURISTICS = "ABCDE";
 
 	private final ExamTimetablingProblem problem;
 
+	private final Random randomGenerator;
+
 	/**
 	 * @param problem - the problem for which this engine is going to produce solutions.
 	 */
-	public PerturbativeHeuristicEngine(ExamTimetablingProblem problem) {
+	public HeuristicEngine(ExamTimetablingProblem problem, long seed) {
 		this.problem = problem;
+		this.randomGenerator = new Random(seed);
 	}
 
 	/**
@@ -144,13 +148,13 @@ public class PerturbativeHeuristicEngine {
 		// Determine random room from the rooms that have enough capacity
 		List<Room> rooms = new ArrayList<>(problem.rooms);
 		rooms.removeIf(r -> r.capacity < oldBooking.exam.students.size());
-		Room room = rooms.get(Globals.randomGenerator.nextInt(rooms.size()));
+		Room room = rooms.get(randomGenerator.nextInt(rooms.size()));
 
 		// Determine random period from the periods that are long enough and will not lead to any clashes; or, just any random period if no clash-free period could be found
 		List<Period> periods = new ArrayList<>(problem.periods);
 		periods.removeIf(p -> p.duration < oldBooking.exam.duration);
 		periods.removeIf(p -> oldSolution.bookings.stream().filter(b -> b.period.equals(p) && b.room.equals(room)).anyMatch(b -> problem.clashMatrix[oldBooking.exam.number][b.exam.number] > 0));
-		Period period = periods.isEmpty() ? problem.periods.get(Globals.randomGenerator.nextInt(problem.periods.size())) : periods.get(Globals.randomGenerator.nextInt(periods.size()));
+		Period period = periods.isEmpty() ? problem.periods.get(randomGenerator.nextInt(problem.periods.size())) : periods.get(randomGenerator.nextInt(periods.size()));
 
 		// Reschedule the exam to the room and period that have been determined
 		Booking newBooking = new Booking(oldBooking.exam, period, room);

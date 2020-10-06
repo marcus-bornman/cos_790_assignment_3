@@ -1,67 +1,44 @@
 package com.marcusbornman.cos_790_assignment_2;
 
-import distrgenalg.DistrGenAlg;
-import uk.ac.qub.cs.itc2007.*;
+import com.marcusbornman.cos_790_assignment_2.search.HeuristicSearch;
+import com.marcusbornman.cos_790_assignment_2.search.multipoint.MultiPointSearch;
+import com.marcusbornman.cos_790_assignment_2.search.singlepoint.SinglePointSearch;
+import com.marcusbornman.cos_790_assignment_2.tools.InitialSolutionBuilder;
+import org.apache.commons.cli.CommandLine;
+import org.apache.commons.cli.DefaultParser;
+import org.apache.commons.cli.Options;
+import org.apache.commons.cli.ParseException;
+import uk.ac.qub.cs.itc2007.ExamTimetablingProblem;
+import uk.ac.qub.cs.itc2007.ExamTimetablingSolution;
 
 import java.io.IOException;
-import java.util.ArrayList;
-import java.util.List;
-import java.util.Random;
 
 public class Main {
-	public static void main(String[] args) throws IOException {
-		// Program arguments
-		String parameterFilePath = args[0];
-		String problemFilePath = args[1];
-		long seed = Long.parseLong(args[2]);
+	public static void main(String[] args) throws ParseException, IOException {
+		// Set up command line options
+		Options options = new Options();
+		options.addRequiredOption("s", "searchType", true, "The search type for the hyper-heuristic. Possible values are 'singlepoint' or 'multipoint'.");
+		options.addRequiredOption("p", "problemFile", true, "The problem instance file for the examination timetabling problem.");
+		options.addRequiredOption("r", "randomSeed", true, "The seed used to generate random values.");
+		options.addOption("g", "geneticParamFile", true, "The genetic parameters file required if 'search' is 'multipoint'");
+		CommandLine cl = new DefaultParser().parse(options, args);
 
-		// Set up the problem instance
-		Globals.randomGenerator = new Random(seed);
-		ExamTimetablingProblem examTimetablingProblem = ExamTimetablingProblem.fromFile(problemFilePath);
-		ExamTimetablingSolution initialSolution = generateInitialSolution(examTimetablingProblem);
-		EvohypProblem evohypProblem = new EvohypProblem(examTimetablingProblem, initialSolution);
+		// Set up problem and initial solution
+		ExamTimetablingProblem problem = ExamTimetablingProblem.fromFile(cl.getOptionValue("p"));
+		InitialSolutionBuilder initialSolutionBuilder = new InitialSolutionBuilder(problem, Long.parseLong(cl.getOptionValue("r")));
+		ExamTimetablingSolution solution = initialSolutionBuilder.generateInitialSolution();
 
-		// Set up the genetic algorithm
-		DistrGenAlg genAlg = new DistrGenAlg(seed, PerturbativeHeuristicEngine.SUPPORTED_HEURISTICS, 4);
-		genAlg.setParameters(parameterFilePath);
-		genAlg.setProblem(evohypProblem);
-
-		// Evolve the genetic algorithm
-		genAlg.evolve();
-	}
-
-	private static ExamTimetablingSolution generateInitialSolution(ExamTimetablingProblem problem) {
-		ExamTimetablingSolution currSolution = new ExamTimetablingSolution(problem, new ArrayList<>());
-		for (Exam exam : problem.exams) {
-			boolean scheduled = false;
-			for (Period period : problem.periods) {
-				for (Room room : problem.rooms) {
-					Booking newBooking = new Booking(exam, period, room);
-					List<Booking> newBookings = new ArrayList<>(currSolution.bookings);
-					newBookings.add(newBooking);
-					ExamTimetablingSolution newSolution = new ExamTimetablingSolution(problem, newBookings);
-
-					if (newSolution.distanceToFeasibility() <= currSolution.distanceToFeasibility()) {
-						currSolution = newSolution;
-						scheduled = true;
-						break;
-					}
-				}
-				if (scheduled) break;
-			}
-			if (!scheduled) currSolution = scheduleRandomly(problem, currSolution, exam);
+		// Improve the solution by applying selective perturbative hyper-heuristics
+		HeuristicSearch search;
+		if (cl.getOptionValue("s").equals("singlepoint")) {
+			search = new SinglePointSearch(problem, solution, Long.parseLong(cl.getOptionValue("r")));
+		} else if (cl.getOptionValue("s").equals("multipoint")) {
+			search = new MultiPointSearch(problem, solution, Long.parseLong(cl.getOptionValue("r")), cl.getOptionValue("g"));
+		} else {
+			throw new IllegalArgumentException(cl.getOptionValue("s") + " is not a valid search type. The available search types are 'singlepoint' and 'multipoint'.");
 		}
 
-		return currSolution;
-	}
-
-	private static ExamTimetablingSolution scheduleRandomly(ExamTimetablingProblem problem, ExamTimetablingSolution currSolution, Exam exam) {
-		Period period = problem.periods.get(Globals.randomGenerator.nextInt(problem.periods.size()));
-		Room room = problem.rooms.get(Globals.randomGenerator.nextInt(problem.rooms.size()));
-		Booking booking = new Booking(exam, period, room);
-		List<Booking> newBookings = new ArrayList<>(currSolution.bookings);
-		newBookings.add(booking);
-		currSolution = new ExamTimetablingSolution(problem, newBookings);
-		return currSolution;
+		solution = search.execute();
+		System.out.println(solution.softConstraintViolations() * (solution.distanceToFeasibility() + 1));
 	}
 }

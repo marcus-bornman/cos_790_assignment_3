@@ -1,5 +1,6 @@
-package com.marcusbornman.cos_790_assignment_2;
+package com.marcusbornman.cos_790_assignment_2.search.multipoint;
 
+import com.marcusbornman.cos_790_assignment_2.tools.HeuristicEngine;
 import problemdomain.ProblemDomain;
 import uk.ac.qub.cs.itc2007.ExamTimetablingProblem;
 import uk.ac.qub.cs.itc2007.ExamTimetablingSolution;
@@ -11,15 +12,18 @@ public class EvohypProblem extends ProblemDomain {
 
 	private final ExamTimetablingSolution initialSolution;
 
+	private final HeuristicEngine heuristicEngine;
+
 	/**
 	 * The constructor for the ExamTimetablingProblem class.
 	 *
 	 * @param problem         - the examination timetabling problem instance that needs to be solved.
 	 * @param initialSolution - the initial solution which need to be improved.
 	 */
-	public EvohypProblem(ExamTimetablingProblem problem, ExamTimetablingSolution initialSolution) {
+	public EvohypProblem(ExamTimetablingProblem problem, ExamTimetablingSolution initialSolution, HeuristicEngine heuristicEngine) {
 		this.problem = problem;
 		this.initialSolution = initialSolution;
+		this.heuristicEngine = heuristicEngine;
 	}
 
 	/**
@@ -39,11 +43,10 @@ public class EvohypProblem extends ProblemDomain {
 	public EvohypSolution evaluate(String heuristicComb) {
 		char[] heuristics = heuristicComb.toCharArray();
 		ExamTimetablingSolution currSolution = new ExamTimetablingSolution(problem, new ArrayList<>(initialSolution.bookings));
-		PerturbativeHeuristicEngine perturbativeHeuristicEngine = new PerturbativeHeuristicEngine(problem);
 
 		for (int i = 0; i < problem.exams.size(); i++) {
 			char heuristic = heuristics[(i % heuristics.length)];
-			currSolution = perturbativeHeuristicEngine.applyToSolution(heuristic, currSolution);
+			currSolution = heuristicEngine.applyToSolution(heuristic, currSolution);
 		}
 
 		return new EvohypSolution(currSolution);
