@@ -4,18 +4,22 @@ import problemdomain.ProblemDomain;
 import uk.ac.qub.cs.itc2007.ExamTimetablingProblem;
 import uk.ac.qub.cs.itc2007.ExamTimetablingSolution;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class EvohypProblem extends ProblemDomain {
 	public final ExamTimetablingProblem problem;
 
+	private final ExamTimetablingSolution initialSolution;
+
 	/**
 	 * The constructor for the ExamTimetablingProblem class.
 	 *
-	 * @param problem - the examination timetabling problem instance that needs to be solved.
+	 * @param problem         - the examination timetabling problem instance that needs to be solved.
+	 * @param initialSolution - the initial solution which need to be improved.
 	 */
-	public EvohypProblem(ExamTimetablingProblem problem) {
+	public EvohypProblem(ExamTimetablingProblem problem, ExamTimetablingSolution initialSolution) {
 		this.problem = problem;
+		this.initialSolution = initialSolution;
 	}
 
 	/**
@@ -33,16 +37,15 @@ public class EvohypProblem extends ProblemDomain {
 	 */
 	@Override
 	public EvohypSolution evaluate(String heuristicComb) {
-		ExamTimetablingSolution solution = new ExamTimetablingSolution(problem, List.of());
-		while (solution.bookings.size() != problem.exams.size()) {
-			PerturbativeHeuristicEngine perturbativeHeuristicEngine = new PerturbativeHeuristicEngine(problem);
-			for (char character : heuristicComb.toCharArray()) {
-				solution = perturbativeHeuristicEngine.applyToSolution(character, solution);
+		char[] heuristics = heuristicComb.toCharArray();
+		ExamTimetablingSolution currSolution = new ExamTimetablingSolution(problem, new ArrayList<>(initialSolution.bookings));
+		PerturbativeHeuristicEngine perturbativeHeuristicEngine = new PerturbativeHeuristicEngine(problem);
 
-				if (solution.bookings.size() == problem.exams.size()) break;
-			}
+		for (int i = 0; i < problem.exams.size(); i++) {
+			char heuristic = heuristics[(i % heuristics.length)];
+			currSolution = perturbativeHeuristicEngine.applyToSolution(heuristic, currSolution);
 		}
 
-		return new EvohypSolution(solution);
+		return new EvohypSolution(currSolution);
 	}
 }
