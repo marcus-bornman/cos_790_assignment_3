@@ -1,7 +1,7 @@
 package com.marcusbornman.cos_790_assignment_2.search.multipoint;
 
-import com.marcusbornman.cos_790_assignment_2.tools.HeuristicEngine;
 import com.marcusbornman.cos_790_assignment_2.search.HeuristicSearch;
+import com.marcusbornman.cos_790_assignment_2.tools.HeuristicEngine;
 import distrgenalg.DistrGenAlg;
 import uk.ac.qub.cs.itc2007.ExamTimetablingProblem;
 import uk.ac.qub.cs.itc2007.ExamTimetablingSolution;
@@ -22,5 +22,10 @@ public class MultiPointSearch extends HeuristicSearch {
 		genAlg.setProblem(evohypProblem);
 		EvohypSolution solution = (EvohypSolution) genAlg.evolve();
 		return solution.solution;
+	}
+
+	@Override
+	public String toString() {
+		return "singlepoint (seed=" + seed + ")";
 	}
 }

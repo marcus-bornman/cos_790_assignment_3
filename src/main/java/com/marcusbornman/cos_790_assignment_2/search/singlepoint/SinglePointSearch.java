@@ -32,4 +32,9 @@ public class SinglePointSearch extends HeuristicSearch {
 
 		return currSolution;
 	}
+
+	@Override
+	public String toString() {
+		return "singlepoint (seed=" + seed + ")";
+	}
 }
