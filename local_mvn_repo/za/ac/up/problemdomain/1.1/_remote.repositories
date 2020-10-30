@@ -1,5 +1,0 @@
-#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
-#Sun Oct 04 21:51:39 SAST 2020
-problemdomain-1.1.jar>local_mvn_repo=
-problemdomain-1.1.pom>local_mvn_repo=
-problemdomain-1.1.jar>=
