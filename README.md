@@ -2,7 +2,7 @@
 
 # COS710 Assignment 2
 
-> This assignment involves comparing the performance of a single-point selection perturbative hyper-heuristic and multipoint selection perturbative hyper-heuristic for solving the examination timetabling problem.
+> This assignment involves implementation of a generation constructive hyper-heuristics to create heuristics for the symmetric and asymmetric travelling salesman problem.
 
 ## Overview
 
