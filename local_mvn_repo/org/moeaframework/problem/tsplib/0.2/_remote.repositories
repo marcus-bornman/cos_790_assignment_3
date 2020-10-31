@@ -1,0 +1,4 @@
+#NOTE: This is a Maven Resolver internal implementation file, its format can be changed without prior notice.
+#Sat Oct 31 09:10:14 SAST 2020
+tsplib-0.2.jar>=
+tsplib-0.2.pom>=

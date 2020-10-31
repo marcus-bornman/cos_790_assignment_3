@@ -16,16 +16,17 @@
 
     <repositories>
         <repository>
-            <id>jitpack.io</id>
-            <url>https://jitpack.io</url>
-        </repository>
-        <repository>
             <id>local_mvn_repo</id>
             <url>file:///${project.basedir}/local_mvn_repo</url>
         </repository>
     </repositories>
 
     <dependencies>
+        <dependency>
+            <groupId>org.moeaframework.problem</groupId>
+            <artifactId>tsplib</artifactId>
+            <version>0.2</version>
+        </dependency>
         <dependency>
             <groupId>za.ac.up</groupId>
             <artifactId>distrgenprog</artifactId>
