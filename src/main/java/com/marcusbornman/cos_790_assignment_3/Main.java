@@ -55,7 +55,7 @@ public class Main {
 		List<Duration> runtimes = new ArrayList<>();
 		List<EvohypSolution> solutions = new ArrayList<>();
 		for (int i = 1; i <= numRuns; i++) {
-			DistrGenProg distrGenProg = new DistrGenProg(i, NodeAttributes.supportedAttributes, 0, 4);
+			DistrGenProg distrGenProg = new DistrGenProg(i, NodeAttributes.supportedAttributes, 1, 4);
 			distrGenProg.setParameters(parameterFile);
 			distrGenProg.setProblem(problem);
 
