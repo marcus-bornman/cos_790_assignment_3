@@ -1,0 +1,21 @@
+\section{Results}
+To run tests a script was written which would run the algorithm on each instance 10 times, recording the solutions, runtimes and fitness values for each of the runs. The script is available in the github repository for this project (available at \url{https://github.com/marcus-bornman/cos_790_assignment_3}). Table \ref{tab:test_results} summarizes the results for each of the problem instances over the 10 runs.
+
+\begin{table}[H]
+\resizebox{\textwidth}{!}{\begin{tabular}{|c|c|c|c|c|}
+\hline
+Problem         & \textbf{Opt. Distance} & \textbf{Avg. Runtime (milliseconds)} & \textbf{Avg. Distance} & \textbf{Best Distance} \\ \hline
+\textbf{ch150}  & 6528                   & 26178.2                              & 35034.7                & 33169                  \\ \hline
+\textbf{eil51}  & 426                    & 3677.0                               & 1140.5                 & 1059                   \\ \hline
+\textbf{eil101} & 629                    & 11570.4                              & 1993.3                 & 1890                   \\ \hline
+\textbf{rat195} & 2323                   & 55772.0                              & 4026.8                 & 4024                   \\ \hline
+\textbf{rd400}  & 15281                  & 232955.0                             & 143113.6               & 136158                 \\ \hline
+\textbf{ftv170} & 2755                   & 5548.0                               & 7146.0                 & 7146                   \\ \hline
+\textbf{rbg323} & 1326                   & 17136.0                              & 5619.8                 & 5591                   \\ \hline
+\textbf{rbg358} & 1163                   & 23060.1                              & 6279.8                 & 5985                   \\ \hline
+\textbf{rbg403} & 2465                   & 22937.2                              & 7398.8                 & 7295                   \\ \hline
+\textbf{rbg443} & 2720                   & 30599.6                              & 8060.4                 & 7776                   \\ \hline
+\end{tabular}}
+\caption{Test Results}
+\label{tab:test_results}
+\end{table}

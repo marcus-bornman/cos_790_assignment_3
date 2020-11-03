@@ -1,0 +1,14 @@
+\section{Fitness Function}\label{sec:fitness}
+To determine the fitness of individuals, we use the distance travelled between cities in order of the priorities calculated by the individual parse tree. To be more specific, for each city the priority is determined using the parse tree of the individual in question; then, after the priority for all cities have been calculated, the cities are ordered by their priorities to provide a route - or solution - for the TSP. Of course, using this calculation for the fitness of an individual means an individual with a lower fitness value is deemed better than one with a higher fitness value. Algorithm \ref{alg:fitness} depicts the fitness function in its entirety.
+
+\begin{algorithm}[H]\label{alg:fitness}
+\SetAlgoLined
+ \ForEach{city in cities}{
+   city.priority = individual.decisionTree.calcPriority(city)\;
+ }
+ \BlankLine
+ cities.orderBy(city.priority)\;
+ \BlankLine
+ return calcDistance(cities)\;
+ \caption{Fitness Function}
+\end{algorithm}

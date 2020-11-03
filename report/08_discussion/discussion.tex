@@ -1,0 +1,34 @@
+\section{Discussion}
+
+To analyze and compare the reported results we will consider existing, manually derived heuristics for the TSP. 
+
+Firstly, Johnson et. al. \cite{johnson2007experimental} report on the results of Cycle Patching (P), Kanellakis-Papadimitriou (KP), Zhang's heuristic (Z) and Helsgaun's Heuristic (H) for the asymmetric TSP. 
+
+Secondly, Glover et. al. \cite{glover2001construction} report on the results of the Greedy  algorithm (GR), Random Insertion (RI), Karp-Steele  patching (KSP), a modified Karp±-Steele patching heuristic (GKS), a recursive path contraction algorithm (RPS), and a contract heuristic (COP) on both symmetric and asymetric problems.
+
+Finally, Halim and Ismail \cite{halim2019combinatorial} report on the results of the Nearest Neighbor  algorithm (NN), a Genetic Algorithm (GA), Simulated Annealing (SA), Tabu Search (TS), Ant Colony Optimization (ACO), and Tree Physiology Optimization (TPO) on both symmetric and asymetric problems.
+
+The performance - in terms of \% over optimal distances - for each of the algorithms above is summarized in table \ref{tab:test_comparison}. Where there are no reported results for an algorithm, the cell is left empty. In addition, the results for the Genetic Programming approach used in this assignment (GP) are summarized in the final column of the table.
+
+\begin{table}[H]
+\resizebox{\textwidth}{!}{\begin{tabular}{|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|c|}
+\hline
+\multirow{3}{*}{Instance} & \multicolumn{17}{c|}{\% Over Optimal}                                                                                                                                                                                                          \\ \cline{2-18} 
+                          & \multicolumn{4}{c|}{Johnson et. al. \cite{johnson2007experimental}}               & \multicolumn{6}{c|}{Glover et. al. \cite{glover2001construction}}                                                   & \multicolumn{6}{c|}{Halim and Ismail \cite{halim2019combinatorial}}                                               &             \\ \cline{2-18} 
+                          & \textbf{P} & \textbf{KP} & \textbf{Z} & \textbf{H} & \textbf{GR} & \textbf{RI} & \textbf{KSP} & \textbf{GKS} & \textbf{RPS} & \textbf{COP} & \textbf{NN} & \textbf{GA} & \textbf{SA} & \textbf{TS} & \textbf{ACO} & \textbf{TPO} & \textbf{GP} \\ \hline
+\textbf{ch150}            & -          & -           & -          & -          & -           & -           & -            & -            & -            & -            & 8.42        & 7.30        & 8.18        & 5.12        & 12.60        & 6.35         & 408.10      \\ \hline
+\textbf{eil51}            & -          & -           & -          & -          & -           & -           & -            & -            & -            & -            & 18.56       & 6.60        & 3.08        & 3.08        & 9.73         & 2.64         & 148.59      \\ \hline
+\textbf{eil101}           & -          & -           & -          & -          & -           & -           & -            & -            & -            & -            & 17.01       & 9.04        & 6.86        & 6.14        & 19.70        & 7.31         & 200.47      \\ \hline
+\textbf{rat195}           & -          & -           & -          & -          & -           & -           & -            & -            & -            & -            & 13.15       & 3.94        & 9.25        & 2.19        & 6.12         & 10.78        & 73.22       \\ \hline
+\textbf{rd400}            & -          & -           & -          & -          & -           & -           & -            & -            & -            & -            & 19.23       & 8.42        & 10.05       & 35.62       & 26.03        & 19.04        & 791.02      \\ \hline
+\textbf{ftv170}           & 1.38       & 4.44        & 0.36       & 0.00       & 32.05       & 28.97       & 2.40         & 1.38         & 25.66        & 3.59         & -           & -           & -           & -           & -            & -            & 159.38      \\ \hline
+\textbf{rbg323}           & 0.00       & 0.78        & 0.00       & 0.00       & 8.52        & 29.34       & 0.00         & 0.00         & 0.53         & 0.00         & -           & -           & -           & -           & -            & -            & 321.64      \\ \hline
+\textbf{rbg358}           & 0.00       & 1.50        & 0.00       & 0.00       & 7.74        & 42.48       & 0.00         & 0.00         & 2.32         & 0.26         & -           & -           & -           & -           & -            & -            & 414.61      \\ \hline
+\textbf{rbg403}           & 0.00       & 0.22        & 0.00       & 0.00       & 0.85        & 9.17        & 0.00         & 0.00         & 0.69         & 0.20         & -           & -           & -           & -           & -            & -            & 195.94      \\ \hline
+\textbf{rbg443}           & 0.00       & 0.11        & 0.00       & 0.00       & 0.92        & 10.48       & 0.00         & 0.00         & 0.00         & 0.00         & -           & -           & -           & -           & -            & -            & 185.88      \\ \hline
+\end{tabular}}
+\caption{Comparison of Results}
+\label{tab:test_comparison}
+\end{table}
+
+In comparing the results in table \ref{tab:test_comparison}, it is obvious that the generation constructive hyper-heuristic explored in this assignment provides poor solutions in comparison to existing manually derived heuristics . However, considering that minimal experimentation was done with regards to parameter optimization and implementation variations, it is still worthwhile to further explore genetic programming in generating constructive low-level heuristics. Future research may also expand upon the execution times of these approaches, which were reported on in this assignment, but not discussed.
