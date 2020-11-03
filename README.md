@@ -1,6 +1,6 @@
 [![University of Pretoria](https://www.up.ac.za/themes/up2.0/images/horizontal-logo.png)]()
 
-# COS710 Assignment 2
+# COS790 Assignment 3
 
 > This assignment involves implementation of a generation constructive hyper-heuristics to create heuristics for the symmetric and asymmetric travelling salesman problem.
 
