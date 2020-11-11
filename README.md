@@ -1,14 +1,118 @@
-[![University of Pretoria](https://www.up.ac.za/themes/up2.0/images/horizontal-logo.png)]()
+<!-- PROJECT LOGO -->
+<p align="right">
+<a href="https://www.up.ac.za">
+<img src="https://raw.githubusercontent.com/marcus-bornman/cos_790_assignment_3/master/assets/project_badge.png" height="100" alt="badge">
+</a>
+</p>
+<p align="center">
+<img src="https://raw.githubusercontent.com/marcus-bornman/cos_790_assignment_3/master/assets/project_logo.png" height="100" alt="logo" />
+</p>
 
-# COS790 Assignment 3
+<!-- PROJECT SHIELDS -->
+<p align="center">
+<a href="https://github.com/marcus-bornman/cos_790_assignment_3/actions?query=workflow%3Abuild"><img src="https://img.shields.io/github/workflow/status/marcus-bornman/cos_790_assignment_3/build?label=build" alt="build"></a>
+<a href="https://github.com/marcus-bornman/cos_790_assignment_3/issues"><img src="https://img.shields.io/github/issues/marcus-bornman/cos_790_assignment_3" alt="issues"></a>
+<a href="https://github.com/marcus-bornman/cos_790_assignment_3/network"><img src="https://img.shields.io/github/forks/marcus-bornman/cos_790_assignment_3" alt="forks"></a>
+<a href="https://github.com/marcus-bornman/cos_790_assignment_3/stargazers"><img src="https://img.shields.io/github/stars/marcus-bornman/cos_790_assignment_3" alt="stars"></a>
+<a href="https://google.github.io/styleguide/javaguide.html"><img src="https://img.shields.io/badge/style-google_java-40c4ff.svg" alt="style"></a>
+<a href="https://github.com/marcus-bornman/cos_790_assignment_3/blob/master/LICENSE"><img src="https://img.shields.io/github/license/Marcus-bornman/cos_790_assignment_3" alt="license"></a>
+</p>
 
-> This assignment involves implementation of a generation constructive hyper-heuristics to create heuristics for the symmetric and asymmetric travelling salesman problem.
+---
 
-## Overview
+<!-- TABLE OF CONTENTS -->
+## Table of Contents
+* [About the Project](#about-the-project)
+* [Getting Started](#getting-started)
+* [Usage](#usage)
+* [Roadmap](#roadmap)
+* [Contributing](#contributing)
+* [License](#license)
+* [Contact](#contact)
+* [Acknowledgements](#acknowledgements)
 
-This assignment was completed as part of the COS790 (Hyper-Heuristics) Honours module at the University of Pretoria.
-The specification for the assignment can be found [here](specification.pdf). In addition, the report compiled for the submission
-of the assignment can be found [in the report folder](report/report.pdf), along with the latex source files used to compile the report.
 
-To reproduce the results mentioned in the report, simply run the `reproduce.sh` in this folder. Note that you will need to have Maven 
-and java version 1.8 or later installed to run the scripts successfully.
+
+<!-- ABOUT THE PROJECT -->
+## About The Project
+<p align="center">
+<img src="https://raw.githubusercontent.com/marcus-bornman/cos_790_assignment_3/master/assets/screenshot_1.gif" width="800" alt="Screenshot 1" />
+</p>
+
+This assignment - completed as part of the COS790 (Hyper-Heuristics) Honours module at the University of Pretoria -
+involves implementing a generation constructive hyper-heuristic to create heuristics for the symmetric and asymmetric 
+travelling salesman problem.
+
+See the following for detailed information about the project:
+* [specification.pdf](assets/specification.pdf) - The specification for this assignment.
+* [report.pdf](assets/report/report.pdf) - The report submitted for this assignment.
+
+### Built With
+* [Java](https://www.java.com/en/)
+* [Apache Maven](https://maven.apache.org)
+
+
+
+<!-- GETTING STARTED -->
+## Getting Started
+To build this project you will need to have Java 13 and [Apache Maven](https://maven.apache.org) installed.
+
+You can ensure that the project compiles by running the following command in the root folder of this project:
+```
+mvn clean compile assembly:single
+```
+
+
+
+<!-- USAGE EXAMPLES -->
+## Usage
+To reproduce the results mentioned in [the report for this assignment](assets/report/report.pdf), you simply need to run the
+[reproduce.sh](results/reproduce.sh) script from the root folder of this project:
+```shell script
+sh results/reproduce.sh
+```
+This will reproduce the output for 10 test runs for each of the tested problems in [problems folder](src/main/resources/problems) in the [results folder](results).
+
+
+
+<!-- ROADMAP -->
+## Roadmap
+See the [open issues](https://github.com/marcus-bornman/cos_790_assignment_3/issues) for a list of other proposed features (and known issues).
+
+
+
+<!-- CONTRIBUTING -->
+## Contributing
+
+Contributions are what make the open source community such an amazing place to be learn, inspire, and create. Any contributions you make are **greatly appreciated**.
+
+1. Fork the Project
+2. Create your Feature Branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your Changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the Branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
+
+
+
+<!-- LICENSE -->
+## License
+
+Distributed under the Academic Free License. See [LICENSE](LICENSE) for more information.
+
+
+
+<!-- CONTACT -->
+## Contact
+
+Marcus Bornman - [marcusbornman.com](https://www.marcusbornman.com) - [marcus.bornman@gmail.com](mailto:marcus.bornman@gmail.com)
+
+Project Link: [https://github.com/marcus-bornman/cos_790_assignment_3](https://github.com/marcus-bornman/cos_790_assignment_3)
+
+
+
+<!-- ACKNOWLEDGEMENTS -->
+## Acknowledgements
+* [TSPLIB4J](https://github.com/dhadka/TSPLIB4J)
+* [EvoHyp](https://sites.google.com/view/evohyp)
+* [Shields IO](https://shields.io)
+* [Open Source Licenses](https://choosealicense.com)
